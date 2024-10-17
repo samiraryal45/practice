@@ -186,18 +186,59 @@ int main()
 
 int main()
 {
-    int i,age;
-    for ( i = 0; i < 50; i++)
+    int i, age;
+    for (i = 0; i < 50; i++)
     {
-        printf(" %d\n Enter your age\n",i);
-        scanf("%d",&age);
+        printf(" %d\n Enter your age\n", i);
+        scanf("%d", &age);
 
-        if (age>10)
+        if (age > 10)
         {
             break;
         }
-        
     }
-    
+
     return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a = 4;
+    float b = (float)57 / 8;
+    printf("Tne value of b is: %f\n", b);
+    return 0;
+}
+#include <stdio.h>
+int sum(int a, int b)
+
+{
+    return a + b;
+}
+int main()
+{
+    int a, b, c;
+    a = 50000 * 5;
+    b = 5;
+    c = sum(a, b);
+    printf("The sum is %d\n", c);
+    return 0;
+}
+#include <stdio.h>
+
+
+
+
+int areaofsquare(int l)
+{
+ int area;
+area=l*l;
+  return area;
+}
+int main()
+{
+  int l=500;
+  int area =areaofsquare(l);
+  printf("The area of square is %d\n",area);
+  return 0;
 }
