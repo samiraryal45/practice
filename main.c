@@ -1,22 +1,21 @@
+
 #include <stdio.h>
 
-int volumeofcuboid(int l,int b, int h)
+
+
+int number()
 {
-
-  int volume;
-  volume= l*b*h;
-  return volume;
+  int a;
+  printf("Enter a number:\n");
+  scanf("%d",&a);
+  return a;
 }
-
 int main()
 {
-  int l,b,h,volume;
-  l=15;
-  b=10;
-  h=6;
-  volume=volumeofcuboid(l,b,h);
 
-  printf("The volume of cuboid is %d\n",volume);
+  int c;
+  c =number();
+  printf("The number enterred is:%d\n",c);
 
-  return 0;
+    return 0;
 }

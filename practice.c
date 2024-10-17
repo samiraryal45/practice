@@ -226,19 +226,127 @@ int main()
 }
 #include <stdio.h>
 
-
-
-
 int areaofsquare(int l)
 {
- int area;
-area=l*l;
-  return area;
+    int area;
+    area = l * l;
+    return area;
 }
 int main()
 {
-  int l=500;
-  int area =areaofsquare(l);
-  printf("The area of square is %d\n",area);
-  return 0;
+    int l = 500;
+    int area = areaofsquare(l);
+    printf("The area of square is %d\n", area);
+    return 0;
+}
+#include <stdio.h>
+
+int volumeofcuboid(int l, int b, int h)
+{
+
+    int volume;
+    volume = l * b * h;
+    return volume;
+}
+
+int main()
+{
+    int l, b, h, volume;
+    l = 15;
+    b = 10;
+    h = 6;
+    volume = volumeofcuboid(l, b, h);
+
+    printf("The volume of cuboid is %d\n", volume);
+
+    return 0;
+}
+#include <stdio.h>
+
+int perimeterofcircle(int r)
+{
+    int perimeter;
+    perimeter = 2 * 22 / 7 * r;
+    return perimeter;
+}
+
+int main()
+{
+
+    int r, perimeter;
+
+    r = 5;
+    perimeter = perimeterofcircle(r);
+
+    printf("The perimeter of circle is %d\n", perimeter);
+
+    return 0;
+}
+#include <stdio.h>
+
+float densityofbody(float m, float v)
+{
+
+    float density;
+    density = m / v;
+    return density;
+}
+int main()
+{
+    float m, v, density;
+    m = 8;
+    v = 6;
+    density = densityofbody(m, v);
+
+    printf("The density of the body is %f\n", density);
+    return 0;
+}
+#include <stdio.h>
+void printstar(int n)
+
+{
+    for (int i = 0; i < n; i++)
+    {
+
+        printf("%c\n", '*');
+    }
+}
+int main()
+{
+
+    printstar(7);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    float a, b;
+
+    printf("Enter the value of a and b:\n");
+    scanf("%f%f", &a, &b);
+    printf("The division of %f and %f is %f", a, b, a / b);
+    return 0;
+}
+
+#include <stdio.h>
+
+
+
+int number()
+{
+  int a;
+  printf("Enter a number:\n");
+  scanf("%d",&a);
+  return a;
+}
+int main()
+{
+
+  int c;
+  c =number();
+  printf("The number enterred is:%d\n",c);
+
+    return 0;
 }

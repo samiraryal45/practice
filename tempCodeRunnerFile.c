@@ -1,4 +1,5 @@
 
 
-
-int areaofSquare(int l)
+int number()
+{
+  int a;
