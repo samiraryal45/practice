@@ -332,21 +332,116 @@ int main()
 
 #include <stdio.h>
 
-
-
 int number()
 {
-  int a;
-  printf("Enter a number:\n");
-  scanf("%d",&a);
-  return a;
+    int a;
+    printf("Enter a number:\n");
+    scanf("%d", &a);
+    return a;
 }
 int main()
 {
 
-  int c;
-  c =number();
-  printf("The number enterred is:%d\n",c);
+    int c;
+    c = number();
+    printf("The number enterred is:%d\n", c);
 
     return 0;
 }
+#include <stdio.h>
+
+int number()
+{
+    int a;
+    printf("Enter a number:\n");
+    scanf("%d", &a);
+    return a;
+}
+int main()
+{
+
+    int c;
+    c = number();
+    printf("The number enterred is:%d\n", c);
+
+    return 0;
+}
+#include <stdio.h>
+
+void helloji()
+
+{
+
+    printf("My name is:");
+}
+
+int main()
+{
+    helloji();
+    printf("Samir ARYAL");
+    return 0;
+}
+
+int product()
+
+{
+
+    int a = 24, b = 70;
+    return a * b;
+}
+
+int main()
+{
+
+    int p;
+    p = product();
+    printf("The product is %d\n", p);
+    return 0;
+}
+#include <stdio.h>
+
+int difference(int a, int b)
+{
+
+   int difference;
+   difference = a - b;
+}
+int main()
+{
+   int a = 10, b = 5, d;
+   d = difference(a, b);
+   printf("The difference is %d\n", d);
+   return 0;
+}
+#include <stdio.h>
+
+int factorial(int number)
+
+{
+if ( number ==1 || number==0)
+{ 
+   return 1;
+}
+
+
+else{
+
+   return (number * factorial(number -1));
+}
+}
+
+
+int main()
+{
+    
+
+int num;
+printf("Enter the number you want the factorial of :\n");
+scanf("%d", &num);
+printf("The factorial of %d is %d\n", num , factorial(num));
+
+
+
+    return 0;
+}
+

@@ -1,5 +1,1 @@
-
-
-int number()
-{
-  int a;
+)
