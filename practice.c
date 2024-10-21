@@ -562,3 +562,60 @@ int main()
 
     return 0;
 }
+#include <stdio.h>
+
+int main()
+{
+    int arr[] = {5, 6, 7, 8, 7, 2, 6, 88, 5};
+    int *a = &arr[3];
+    printf("%p\n", &a);
+    printf("%d\n", arr[1]);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int hi(int array[])
+{
+    for (int i = 0; i < 4; i++)
+    {
+        printf("The value at position %d is %d\n", i, array[i]);
+    }
+}
+
+int main()
+{
+
+    int arr[] = {5, 6, 7, 8, 9, 922, 44, 56, 3}, array;
+    hi(array);
+
+    return 0;
+}
+#include <stdio.h>
+
+void starPattern(int rows)
+{
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j <= rows - i - 1; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+int main()
+{
+
+    int rows;
+
+    printf("rows=\n");
+    scanf("%d", &rows);
+    starPattern(rows);
+
+    return 0;
+}
+

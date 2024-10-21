@@ -8,6 +8,6 @@ int main()
     char p2[]="lodauji";
     printf("The length of character p1 is %ld\n",strlen(p1));
     printf("The length of character p2 is %ld\n",strlen(p2));
-    puts(strev(p1));
+    
     return 0;
 }
