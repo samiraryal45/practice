@@ -403,45 +403,162 @@ int main()
 int difference(int a, int b)
 {
 
-   int difference;
-   difference = a - b;
+    int difference;
+    difference = a - b;
 }
 int main()
 {
-   int a = 10, b = 5, d;
-   d = difference(a, b);
-   printf("The difference is %d\n", d);
-   return 0;
+    int a = 10, b = 5, d;
+    d = difference(a, b);
+    printf("The difference is %d\n", d);
+    return 0;
 }
 #include <stdio.h>
 
 int factorial(int number)
 
 {
-if ( number ==1 || number==0)
-{ 
-   return 1;
+    if (number == 1 || number == 0)
+    {
+        return 1;
+    }
+
+    else
+    {
+
+        return (number * factorial(number - 1));
+    }
 }
-
-
-else{
-
-   return (number * factorial(number -1));
-}
-}
-
 
 int main()
 {
-    
 
-int num;
-printf("Enter the number you want the factorial of :\n");
-scanf("%d", &num);
-printf("The factorial of %d is %d\n", num , factorial(num));
-
-
+    int num;
+    printf("Enter the number you want the factorial of :\n");
+    scanf("%d", &num);
+    printf("The factorial of %d is %d\n", num, factorial(num));
 
     return 0;
 }
+#include <stdio.h>
 
+int main()
+{
+
+    int input;
+    float kmsToMiles = 0.621371;
+    float inchesToFoot = 0.0833333;
+    float cmsToInches = 0.393701;
+    float poundToKgs = 0.453592;
+    float inchesToMeters = 0.0254;
+    float first, second;
+
+    printf("Enter the conversion you want\n"
+           " 1. kmtoMiles\n"
+           " 2.inchestoFoot\n  "
+           " 3.cmstoInches\n "
+           " 4. None\n");
+    scanf("%d", &input);
+
+    if (input == 1)
+    {
+
+        printf("Enter the first conversion unit");
+        scanf("%f", &first);
+        second = first * kmsToMiles;
+        printf("%f kms is equal to %f MIles", first, second);
+    }
+
+    else if (input == 2)
+    {
+        second = first * inchesToFoot;
+        printf("Enter the first conversion unit");
+        scanf("%f", &first);
+
+        printf("%f kms is equal to %f MIles", first, second);
+    }
+
+    else if (input == 3)
+    {
+
+        printf("Enter the first conversion unit");
+        scanf("%f", &first);
+        second = first * cmsToInches;
+        printf("%f kms is equal to %f MIles", first, second);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    float pounds, kgs, poundstokgs;
+    poundstokgs = 0.453592;
+
+    printf("Enter the value in pounds you want t0 convert into kgs\n");
+    scanf("%f", &pounds);
+    printf("%.2f pounds is equal to %.2f kgs", pounds, pounds * poundstokgs);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int marks[50] = {5, 10, 15, 20, 25, 40, 50, 70, 80, 30, 12, 20, 30, 55, 67, 68, 67, 23, 45, 58, 89, 90, 89, 99};
+
+    for (int i = 1; i < 20; i++)
+    {
+        printf("The marks obtained by roll no. %d is %d\n ", i, marks[i]);
+    }
+}
+
+#include <stdio.h>
+int main()
+{
+
+    int marks[2][3] = {{45, 86, 81},
+                       {56, 76, 98}};
+
+    for (int i = 1; i < 4; i++)
+    {
+
+        for (int j = 1; j < 3; j++)
+        {
+            printf("The marks of roll no. %d of class %d is %d\n", i, j, marks[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+int main()
+{
+
+    int marks[2][3] = {{45, 68, 51},
+                       {98, 54, 75}};
+
+    for (int i = 0; i < 2; i++)
+    {
+
+        for (int j = 0; j < 3; j++)
+        {
+            printf("The marks obtained by roll no. %d of %d class is %d\n", j, i, marks[i][j]);
+        }
+    }
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a = 5;
+    int *b = &a;
+    printf("The address of a is %p\n ", &b);
+    printf("The address of a is %p\n ", &a);
+    printf("The value of a is %d\n", *b);
+    printf("The value of a is %d\n", a);
+
+    return 0;
+}
