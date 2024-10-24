@@ -693,9 +693,9 @@ int main()
 
 struct Drivers
 {
-    
+
     int Drivinglicenceno;
-    
+
     float kms;
 };
 
@@ -706,7 +706,7 @@ int main()
 
     printf("Enter the respective numbers to get your details:\n  1=d1\n 2=d2\n 3=d3\n 4=d4\n 5=d5\n ");
     scanf("%d", &num);
-    struct Drivers d1 =  {8810, 220.56}, d2 = { 4456, 201.5}, d3 = { 9648,  205.68}, d4 = {5973, 208.56}, d5 = {3875,  120.67};
+    struct Drivers d1 = {8810, 220.56}, d2 = {4456, 201.5}, d3 = {9648, 205.68}, d4 = {5973, 208.56}, d5 = {3875, 120.67};
 
     if (num == 1)
     {
@@ -749,3 +749,193 @@ int main()
 
     return 0;
 }
+#include <stdio.h>
+
+int main()
+{
+    int n, p1, p2, p3;
+    printf("Enter the percentage you secured in the examination:\n");
+    scanf("%d", &n);
+    printf("Enter the percentage you secured in mathematics:\n");
+    scanf("%d", &p1);
+    printf("Enter the percentage you secured in physics:\n");
+    scanf("%d", &p2);
+    printf("Enter the percentage you secured in computer science:\n");
+    scanf("%d", &p3);
+
+    if (n > 90 && n >= 100)
+    {
+        printf("Congratulations you obtained grade A+ in the examination\n");
+    }
+
+    else if (n <= 100 && n >= 40)
+    {
+        printf("Congratulations you passed the examination\n");
+    }
+
+    else if (n > 40)
+    {
+        printf("You failed the examination.Better luck next time!\n");
+    }
+
+    if (p1 > 33 && p1 <= 100)
+    {
+        printf("Congratulations you passed in mathematics in the examination\n");
+    }
+
+    else if (p1 < 33)
+    {
+        printf("You failed in mathematics examination.Better luck next time!\n");
+    }
+
+    if (p2 > 33 && p2 <= 100)
+    {
+        printf("Congratulations you passed in physics in the examination\n");
+    }
+
+    else if (p2 < 33)
+    {
+        printf("You failed in physiscs examination.Better luck next time!\n");
+    }
+
+    if (p3 > 33 && p3 <= 100)
+    {
+        printf("Congratulations you passed in computer science in the examination\n");
+    }
+
+    else if (p3 < 33)
+    {
+        printf("You failed in computer science examination.Better luck next time!\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+struct Drivers
+{
+
+    int Drivinglicenceno;
+
+    float kms;
+};
+
+int main()
+{
+
+    int num;
+
+    printf("Enter the respective numbers to get your details:\n  1=d1\n 2=d2\n 3=d3\n 4=d4\n 5=d5\n ");
+    scanf("%d", &num);
+    struct Drivers d1 = {8810, 220.56}, d2 = {4456, 201.5}, d3 = {9648, 205.68}, d4 = {5973, 208.56}, d5 = {3875, 120.67};
+
+    if (num == 1)
+    {
+
+        char name[] = {"Suresh Chapagain"};
+        char route[] = {"KTM to CHITWAN"};
+        printf("The details of the driver d1 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d1.Drivinglicenceno, route, d1.kms);
+    }
+
+    else if (num == 2)
+    {
+
+        char name[] = {"Samir Ghising"};
+        char route[] = {"KTM to POKHARA"};
+        printf("The details of the driver d2 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d2.Drivinglicenceno, route, d2.kms);
+    }
+
+    else if (num == 3)
+    {
+
+        char name[] = {"turi"};
+        char route[] = {"KTM to ghandhruk"};
+        printf("The details of the driver d3 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d3.Drivinglicenceno, route, d3.kms);
+    }
+
+    else if (num == 4)
+    {
+        char name[] = {"Aayush Chapagain"};
+        char route[] = {"KTM to POKHARA"};
+        printf("The details of the driver d5 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d4.Drivinglicenceno, route, d4.kms);
+    }
+
+    else if (num == 5)
+    {
+        char name[] = {"Aashutosh Loda"};
+        char route[] = {"KTM to POKHARA"};
+
+        printf("The details of the driver d5 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d5.Drivinglicenceno, route, d5.kms);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    int y;
+    printf("Enter the year :\n");
+    scanf("%d",&y);
+    if (y%4==0 && y%100==0 && y%400==0)
+    {
+        printf("This is a leap year\n");
+    }
+    else{
+        printf("This is not a leap year\n");
+    }
+    
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    printf("Enter the alphabet you want in lowercase or uppercase:\n");
+    scanf("%c",&ch);
+    if (ch >= 97 && ch <= 122)
+    {
+        printf("This is lowercase alphabet");
+    }
+    else
+    {
+        printf("This is a uppercase alphabet");
+    }
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int a,b,c,d;
+    printf("Enter a:\n");
+    scanf("%d",&a);
+    printf("Enter b:\n");
+    scanf("%d",&b);
+    printf("Enter c:\n");
+    scanf("%d",&c);
+    printf("Enter d:\n");
+    scanf("%d",&d);
+    if (a>b && a>c && a>d)
+    {
+        printf("The greatest number is %d\n",a);
+    }
+    else if (b>a && b>c && b>d)
+    {
+        printf("The greatest number is %d\n",b);
+    }
+    else if (c>a && c>b && c>d)
+    {
+        printf("The greatest number is %d\n",c);
+    }
+     else if (d>b && d>c && d>a)
+    {
+        printf("The greatest number is %d\n",d);
+    }
+    
+    return 0;
+}
+ 
