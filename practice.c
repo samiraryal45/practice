@@ -618,4 +618,134 @@ int main()
 
     return 0;
 }
+#include <stdio.h>
 
+int array(int arr[])
+{
+
+    int h;
+    for (int i = 0; i < 7 / 2; i++)
+    {
+        h = arr[i];
+        arr[i] = arr[6 - i];
+        arr[6 - i] = h;
+    }
+}
+
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5, 6, 7};
+
+    for (int i = 0; i < 7; i++)
+    {
+        printf(" %d\n", arr[i]);
+    }
+
+    array(arr);
+    printf("After reversing\n");
+    for (int i = 0; i < 7; i++)
+    {
+        printf(" %d\n", arr[i]);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+float areaoftrapezium(float l1, float l2, float h)
+{
+
+    float trapezium;
+    trapezium = ((l1 + l2) * h) / 2;
+    return trapezium;
+}
+int main()
+{
+    float l1, l2, h, trapezium;
+    l1 = 3.4;
+    l2 = 4.5;
+    h = 8;
+    trapezium = areaoftrapezium(l1, l2, h);
+    printf("The area of the required traprzium is %.2f\n", trapezium);
+    return 0;
+}
+
+#include <stdio.h>
+
+struct MAN
+{
+    int percentage;
+    float gpa;
+    char character;
+};
+
+int main()
+{
+    struct MAN SamirAryal = {92, 3.82, 'X'};
+    printf("The percentege obtained by Mr. Samir Aryal in the Secondary Education Examination is %d.\n", SamirAryal.percentage);
+    printf("The Grade Point Average(GPA) obtained by Mr. Samir Aryal in the Secondary Education Examination is %.2f.\n", SamirAryal.gpa);
+    printf("The favourite caharater of Mr. Samir Aryal is %c.\n", SamirAryal.character);
+
+    return 0;
+}
+#include <stdio.h>
+
+struct Drivers
+{
+    
+    int Drivinglicenceno;
+    
+    float kms;
+};
+
+int main()
+{
+
+    int num;
+
+    printf("Enter the respective numbers to get your details:\n  1=d1\n 2=d2\n 3=d3\n 4=d4\n 5=d5\n ");
+    scanf("%d", &num);
+    struct Drivers d1 =  {8810, 220.56}, d2 = { 4456, 201.5}, d3 = { 9648,  205.68}, d4 = {5973, 208.56}, d5 = {3875,  120.67};
+
+    if (num == 1)
+    {
+
+        char name[] = {"Suresh Chapagain"};
+        char route[] = {"KTM to CHITWAN"};
+        printf("The details of the driver d1 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d1.Drivinglicenceno, route, d1.kms);
+    }
+
+    else if (num == 2)
+    {
+
+        char name[] = {"Samir Ghising"};
+        char route[] = {"KTM to POKHARA"};
+        printf("The details of the driver d2 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d2.Drivinglicenceno, route, d2.kms);
+    }
+
+    else if (num == 3)
+    {
+
+        char name[] = {"Samir Ghising"};
+        char route[] = {"KTM to POKHARA"};
+        printf("The details of the driver d1 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d3.Drivinglicenceno, route, d3.kms);
+    }
+
+    else if (num == 4)
+    {
+        char name[] = {"Samir Ghising"};
+        char route[] = {"KTM to POKHARA"};
+        printf("The details of the driver d1 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d4.Drivinglicenceno, route, d4.kms);
+    }
+
+    else if (num == 5)
+    {
+        char name[] = {"Samir Ghising"};
+        char route[] = {"KTM to POKHARA"};
+
+        printf("The details of the driver d1 are:\n 1.Name=%s\n 2.Driving Licence no.:%d\n 3.Respective route:%s\n 4.Total distance drove till date:%.2f\n", name, d5.Drivinglicenceno, route, d5.kms);
+    }
+
+    return 0;
+}
