@@ -938,4 +938,41 @@ int main()
     
     return 0;
 }
+     #include <stdio.h>
+    
+    
+    int main()
+    {
+        int n;
+        printf("Write the number you want the multiplication table of :\n");
+        scanf("%d",&n);
+        printf("The table is as follows:\n");
+
+        for (int i = 1; i < 11; i++)
+        {
+            printf("%d * %d =%d\n",n,i,n*i);
+        }
+        
+        
+        return 0;
+    }
+    #include <stdio.h>
+
+
+int main()
+{
+    int n,sum=0;
+    printf("Enter the value of n:\n");
+    scanf("%d",&n);
+
  
+    for (int i = 1; i <= n; i++)
+    {
+        sum +=i;
+        
+    }
+
+    
+    printf("The sum is %d",sum);
+    return 0;
+}

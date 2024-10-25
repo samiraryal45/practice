@@ -1,17 +1,23 @@
 #include <stdio.h>
 
+
 int main()
 {
-    char ch;
-    printf("Enter the alphabet you want in lowercase or uppercase:\n");
-    scanf("%c",&ch);
-    if (ch >= 97 && ch <= 122)
+    int n;
+    printf("Enter the number as input:\n");
+    scanf("%d",&n);
+    if (n==1)
     {
-        printf("This is lowercase alphabet");
+        printf("This is controversial");
     }
-    else
+    else if (n %2==0)
     {
-        printf("This is a uppercase alphabet");
+        printf("This is not a prime number");
     }
+    else{
+        printf("This is a prime number");
+    }
+    
+    
     return 0;
 }
