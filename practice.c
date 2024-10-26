@@ -877,15 +877,16 @@ int main()
 {
     int y;
     printf("Enter the year :\n");
-    scanf("%d",&y);
-    if (y%4==0 && y%100==0 && y%400==0)
+    scanf("%d", &y);
+    if (y % 4 == 0 && y % 100 == 0 && y % 400 == 0)
     {
         printf("This is a leap year\n");
     }
-    else{
+    else
+    {
         printf("This is not a leap year\n");
     }
-    
+
     return 0;
 }
 #include <stdio.h>
@@ -894,7 +895,7 @@ int main()
 {
     char ch;
     printf("Enter the alphabet you want in lowercase or uppercase:\n");
-    scanf("%c",&ch);
+    scanf("%c", &ch);
     if (ch >= 97 && ch <= 122)
     {
         printf("This is lowercase alphabet");
@@ -907,72 +908,277 @@ int main()
 }
 #include <stdio.h>
 
-
 int main()
 {
-    int a,b,c,d;
+    int a, b, c, d;
     printf("Enter a:\n");
-    scanf("%d",&a);
+    scanf("%d", &a);
     printf("Enter b:\n");
-    scanf("%d",&b);
+    scanf("%d", &b);
     printf("Enter c:\n");
-    scanf("%d",&c);
+    scanf("%d", &c);
     printf("Enter d:\n");
-    scanf("%d",&d);
-    if (a>b && a>c && a>d)
+    scanf("%d", &d);
+    if (a > b && a > c && a > d)
     {
-        printf("The greatest number is %d\n",a);
+        printf("The greatest number is %d\n", a);
     }
-    else if (b>a && b>c && b>d)
+    else if (b > a && b > c && b > d)
     {
-        printf("The greatest number is %d\n",b);
+        printf("The greatest number is %d\n", b);
     }
-    else if (c>a && c>b && c>d)
+    else if (c > a && c > b && c > d)
     {
-        printf("The greatest number is %d\n",c);
+        printf("The greatest number is %d\n", c);
     }
-     else if (d>b && d>c && d>a)
+    else if (d > b && d > c && d > a)
     {
-        printf("The greatest number is %d\n",d);
+        printf("The greatest number is %d\n", d);
     }
-    
+
     return 0;
 }
-     #include <stdio.h>
-    
-    
-    int main()
-    {
-        int n;
-        printf("Write the number you want the multiplication table of :\n");
-        scanf("%d",&n);
-        printf("The table is as follows:\n");
-
-        for (int i = 1; i < 11; i++)
-        {
-            printf("%d * %d =%d\n",n,i,n*i);
-        }
-        
-        
-        return 0;
-    }
-    #include <stdio.h>
-
+#include <stdio.h>
 
 int main()
 {
-    int n,sum=0;
-    printf("Enter the value of n:\n");
-    scanf("%d",&n);
+    int n;
+    printf("Write the number you want the multiplication table of :\n");
+    scanf("%d", &n);
+    printf("The table is as follows:\n");
 
- 
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i < 11; i++)
     {
-        sum +=i;
-        
+        printf("%d * %d =%d\n", n, i, n * i);
     }
 
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n, sum = 0;
+    printf("Enter the value of n:\n");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        sum += i;
+    }
+
+    printf("The sum is %d", sum);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    int n, sum = 0;
+    printf("Enter the value of n:\n");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
+    {
+        sum += i;
+    }
+
+    printf("The sum is %d", sum);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n = 1;
+    while (n < 10)
+    {
+        printf("8\n");
+        n++;
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter a number as an input:\n");
+    scanf("%d", &n);
+
+    if (n == 1)
+    {
+        printf("This is controversial\n");
+    }
+    else
+    {
+        for (int i = 2; i < n; i++)
+        {
+            if (n % i == 0)
+            {
+                printf("This is not a prime number\n");
+                return 0;
+            }
+        }
+        printf("This is a prime number\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+
+{
+    const int MIN = 1;
+    const int MAX = 100;
+    int guess = 0;
+    int guesses = 0;
+    int answer = 0;
+
+    // uses the current time as a seed
+    srand(time(0));
+
+    // generate a random number between MIN & MAX
+    answer = (rand() % MAX) + MIN;
+
+    do
+    {
+        printf("Enter a guess: ");
+        scanf("%d", &guess);
+        if (guess > answer)
+        {
+            printf("Too high!\n");
+        }
+        else if (guess < answer)
+        {
+            printf("Too low!\n");
+        }
+        else
+        {
+            printf("CORRECT!\n");
+        }
+        guesses++;
+    } while (guess != answer);
+
+    printf("**********************\n");
+    printf("answer: %d\n", answer);
+    printf("guesses: %d\n", guesses);
+    printf("**********************");
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    float r, pie = 3.14, area;
+    printf("Enter the radius of the circle:\n");
+    scanf("%f", &r);
+    area = pie * r * r;
+    printf("The area of the circle is %.2f", area);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the value of n:\n");
+    scanf("%d", &n);
+    if (n == 1 || n % 2 != 0)
+    {
+        printf("This is a odd number.\n");
+    }
+    else
+    {
+        printf("This is a even number.\n");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, average;
+
+    printf("Enter the value of a:\n");
+    scanf("%d", &a);
+    printf("Enter the value of b:\n");
+    scanf("%d", &b);
+    printf("Enter the value of c:\n");
+    scanf("%d", &c);
+    average = (a + b + c) / 3;
+    printf("The average of the numbers is %d\n", average);
+    return 0;
+}
+#include <stdio.h>
+int areaofsquare(int l)
+{
+    int area;
+    area = l * l;
+    return area;
+}
+
+int main()
+{
+    int n, area;
+
+    printf("Enter the value of l:\n");
+    scanf("%d", &n);
+    area = areaofsquare(n);
+    printf("The area of square is %d\n", area);
+    return 0;
+}
+#include <stdio.h>
+
+int fact(int n)
+{
+
+    int v = 1;
+    for (int i = n; i > 1; i--)
+    {
+        v *= i;
+    }
+    return v;
+}
+int main()
+{
+    int n;
+    printf("Enter the number you want the factorial of :\n");
+    scanf("%d", &n);
+    fact(n);
+    printf("The factorial  is %d\n", fact(n));
+    return 0;
+}
+#include <stdio.h>
+
+void fibonacci(int n)
+{
+    int a=0,b=1,c;
+    for (int i = 1; i <=n; i++)
+    {
+        printf("%d ",a);
+        c=a+b;
+        a=b;
+        b=c;
+
+    }
     
-    printf("The sum is %d",sum);
+}
+int main()
+{
+    int n;
+    printf("ENTER THE NUMBER OF TERMS UPTO THE FIBONACCI SERIES:\n");
+    scanf("%d",&n);
+    printf("The fibonacci series upto %d terms is:\n",n);
+    fibonacci(n);
     return 0;
 }

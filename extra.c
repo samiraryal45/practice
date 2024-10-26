@@ -1,23 +1,16 @@
 #include <stdio.h>
 
-
+int multiply(int x){
+    int a=10 *x;
+    
+    return a;
+}
 int main()
 {
     int n;
-    printf("Enter the number as input:\n");
+    printf("Enter the number");
     scanf("%d",&n);
-    if (n==1)
-    {
-        printf("This is controversial");
-    }
-    else if (n %2==0)
-    {
-        printf("This is not a prime number");
-    }
-    else{
-        printf("This is a prime number");
-    }
-    
-    
+    multiply(n);
+    printf("The ten times its value is %d\n",multiply(n));
     return 0;
 }
