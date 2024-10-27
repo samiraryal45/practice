@@ -846,7 +846,7 @@ int main()
     }
 
     else if (num == 3)
-    {
+    { 
 
         char name[] = {"turi"};
         char route[] = {"KTM to ghandhruk"};
@@ -1180,5 +1180,93 @@ int main()
     scanf("%d",&n);
     printf("The fibonacci series upto %d terms is:\n",n);
     fibonacci(n);
+    return 0;
+}
+    #include <stdio.h>
+
+int multiply(int x)
+{
+    int a = 10 * x;
+
+    return a;
+}
+int main()
+{
+    int n;
+    printf("Enter the number");
+    scanf("%d", &n);
+    multiply(n);
+    printf("The ten times its value is %d\n", multiply(n));
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    char str[] = {"Hello, World!"};
+    
+    // Loop through each character in the string until we hit the null terminator
+    for (int i = 0; str[i] != '\0'; i++) {
+        printf("%c", str[i]);
+    }
+    
+    printf("\n"); // Print a newline after the loop
+    return 0;
+}   
+#include <stdio.h>
+void printstars(int n)
+{
+    for (int i = 0; i <=n; i++)
+    {
+        for (int j = 0; j < 3*i+1; j++)
+        {
+          printf("*");
+        }
+        printf("\n");
+    }
+    
+}
+int main()
+{
+    int n;
+    printf("Enter the no. of rows you want your pattern at:\n");
+    scanf("%d",&n);
+    printstars(n);
+    return 0;
+}
+#include <stdio.h>
+
+void sumVector(int vector1[2], int vector2[2], int result[2]) {
+    result[0] = vector1[0] + vector2[0];
+    result[1] = vector1[1] + vector2[1];
+}
+
+int main() {
+    int vector1[2] = {1, 2};
+    int vector2[2] = {3, 4};
+    int result[2];
+
+    sumVector(vector1, vector2, result);
+
+    printf("Sum of vectors: [%d, %d]\n", result[0], result[1]);
+    return 0;
+}
+#include <stdio.h>
+
+typedef struct 
+{
+    float real;
+    float img;
+}Complexno;
+
+
+void createcomplex(Complexno n){
+
+    printf("%.2f + %.2fi\n",n.real,n.img);
+}
+int main()
+{
+    Complexno c = {4.00,5.00};
+    createcomplex(c);
+    
     return 0;
 }
