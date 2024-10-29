@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-typedef struct {
-    double real;
-    double imag;
-} Complex;
 
-void displayComplex(Complex c) {
-    printf("%.2f + %.2fi\n", c.real, c.imag);
-}
-
-int main() {
-    Complex c1 = {3.0, 4.0};  // Initialize a complex number
-    displayComplex(c1);       // Display the complex number
-
-    return 0;
-}
+int main()
+{
+    int n;
+    int i=1;
+    printf("Enter the first n natural numbers:\n");
+    scanf("%d",&n);
+    do
+    {
+        
+        printf("%d\n",i);
+        i++;    
+    } while ( i<=n);
+    
+    return 0;}
 

@@ -846,7 +846,7 @@ int main()
     }
 
     else if (num == 3)
-    { 
+    {
 
         char name[] = {"turi"};
         char route[] = {"KTM to ghandhruk"};
@@ -1162,27 +1162,25 @@ int main()
 
 void fibonacci(int n)
 {
-    int a=0,b=1,c;
-    for (int i = 1; i <=n; i++)
+    int a = 0, b = 1, c;
+    for (int i = 1; i <= n; i++)
     {
-        printf("%d ",a);
-        c=a+b;
-        a=b;
-        b=c;
-
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
     }
-    
 }
 int main()
 {
     int n;
     printf("ENTER THE NUMBER OF TERMS UPTO THE FIBONACCI SERIES:\n");
-    scanf("%d",&n);
-    printf("The fibonacci series upto %d terms is:\n",n);
+    scanf("%d", &n);
+    printf("The fibonacci series upto %d terms is:\n", n);
     fibonacci(n);
     return 0;
 }
-    #include <stdio.h>
+#include <stdio.h>
 
 int multiply(int x)
 {
@@ -1201,46 +1199,49 @@ int main()
 }
 #include <stdio.h>
 
-int main() {
+int main()
+{
     char str[] = {"Hello, World!"};
-    
+
     // Loop through each character in the string until we hit the null terminator
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; str[i] != '\0'; i++)
+    {
         printf("%c", str[i]);
     }
-    
+
     printf("\n"); // Print a newline after the loop
     return 0;
-}   
+}
 #include <stdio.h>
 void printstars(int n)
 {
-    for (int i = 0; i <=n; i++)
+    for (int i = 0; i <= n; i++)
     {
-        for (int j = 0; j < 3*i+1; j++)
+        for (int j = 0; j < 3 * i + 1; j++)
         {
-          printf("*");
+            printf("*");
         }
         printf("\n");
     }
-    
 }
 int main()
 {
     int n;
     printf("Enter the no. of rows you want your pattern at:\n");
-    scanf("%d",&n);
+    scanf("%d", &n);
     printstars(n);
     return 0;
 }
 #include <stdio.h>
 
-void sumVector(int vector1[2], int vector2[2], int result[2]) {
+void sumVector(int vector1[2], int vector2[2], int result[2])
+{
     result[0] = vector1[0] + vector2[0];
     result[1] = vector1[1] + vector2[1];
 }
 
-int main() {
+int main()
+{
     int vector1[2] = {1, 2};
     int vector2[2] = {3, 4};
     int result[2];
@@ -1252,21 +1253,207 @@ int main() {
 }
 #include <stdio.h>
 
-typedef struct 
+typedef struct
 {
-    float real;
-    float img;
-}Complexno;
+    double real;
+    double imag;
+} Complex;
 
-
-void createcomplex(Complexno n){
-
-    printf("%.2f + %.2fi\n",n.real,n.img);
+void displayComplex(Complex c)
+{
+    printf("%.2f + %.2fi\n", c.real, c.imag);
 }
+
 int main()
 {
-    Complexno c = {4.00,5.00};
-    createcomplex(c);
-    
+    Complex c1 = {3.0, 4.0}; // Initialize a complex number
+    displayComplex(c1);      // Display the complex number
+
     return 0;
 }
+#include <stdio.h>
+
+int main()
+{
+    int rows;
+    printf("\n");
+    scanf("%d", &rows);
+
+    for (int i = 0; i < rows; i++)
+    {
+        // Print spaces
+        for (int j = 0; j < rows - i - 1; j++)
+        {
+            printf(" ");
+        }
+
+        // Print stars
+        for (int k = 0; k < 2 * i + 1; k++)
+        {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+void reverse(int arr[])
+{
+
+    for (int i = 0; i < 8 / 2; i++)
+    {
+        int h = arr[i];
+        arr[i] = arr[7 - i];
+        arr[7 - i] = h;
+    }
+}
+
+int main()
+{
+    int arr[8] = {22, 45, 6, 7, 8, 9, 23, 45};
+    int i;
+
+    for (i = 0; i < 8; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("After reversing\n");
+    reverse(arr);
+
+    for (i = 0; i < 8; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a[10] = {0}, n, r;
+    printf("Enter the nmber:\n");
+    scanf("%d", &n);
+    while (n > 0)
+    {
+        r = n % 10;
+        if (a[r] == 1)
+        {
+            break;
+        }
+        else
+        {
+            a[r] = 1;
+        }
+        n /= 10;
+    }
+    if (n > 0)
+    {
+        printf("there are  repetition");
+    }
+    else
+    {
+        printf("there are  no repetition");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a[] = {4, 5, 5, 6, 6, 6, 7, 7, 3, 2, 11, 3, 5, 6, 7, 7, 8, 8, 9, 9, 9, 9, 0, 0, 4, 3, 2, 3, 4, 6, 7, 8, 9, 9, 0, 7, 6, 5, 4, 3, 2, 1, 2, 4, 5, 6, 6, 6, 7, 4, 4, 4, 4, 5, 5, 5};
+    printf("%ld\n", sizeof(a) / sizeof(a[40]));
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a[10][10];
+    int ar, ac;
+
+    printf("Enter the no. of rows and columns of matrix a\n");
+    scanf("%d %d", &ar, &ac);
+
+    printf("enter the element of matrix a:\n");
+
+    for (int i = 0; i < ar; i++)
+    {
+        for (int j = 0; j < ac; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    int b[10][10];
+    int br, bc;
+
+    printf("Enter the no. of rows and columns of matrix b\n");
+    scbnf("%d %d", &br, &bc);
+
+    printf("enter the element of matrix b:\n");
+
+    for (int i = 0; i < br; i++)
+    {
+        for (int j = 0; j < bc; j++)
+        {
+            scanf("%d", &b[i][j]);
+        }
+    }
+
+    int product[10][10];
+    int sum = 0;
+    for (int i = 0; i < ar; i++)
+    {
+        for (int j = 0; i < bc; j++)
+        {
+            for (int k = 0; i < br; k++)
+            {
+                sum += a[i][k] * b[k][j];
+            }
+            product[i][j] = sum;
+            sum = 0;
+        }
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int n, i = 1;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    printf("The first %d natural numbers are:\n", n);
+
+    do {
+        printf("%d ", i);
+        i++;
+    } while (i <= n);
+
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    int i=1;
+    printf("Enter the first n natural numbers:\n");
+    scanf("%d",&n);
+    do
+    {
+        
+        printf("%d\n",i);
+        i++;    
+    } while ( i<=n);
+    
+    return 0;}
+

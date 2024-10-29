@@ -1,20 +1,20 @@
 #include <stdio.h>
 
-typedef struct 
-{
-    float real;
-    float img;
-}Complexno;
-
-
-void createcomplex(Complexno n){
-
-    printf("%.2f + %.2fi\n",n.real,n.img);
-}
 int main()
 {
-    Complexno c = {4.00,5.00};
-    createcomplex(c);
-    
+int x,y;
+printf("enter the value of x:\n");
+scanf("%d",&x);
+printf("enter the value of y:\n");
+scanf("%d",&y);
+if (x<y)
+{
+  printf("x is less than y");
+
+}
+else{
+  printf("y is less than x");
+}
+
     return 0;
 }
