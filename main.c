@@ -1,13 +1,27 @@
 #include <stdio.h>
 
+void oddeven(int n);
 int main()
 {
-    float x, y;
-    printf("Enter the value of x:\n");
-    scanf("%f", &x);
-    printf("Enter the value of y:\n");
-    scanf("%f", &y);
-    double z = (double)x / (double)y;
-    printf(" x divided by y is %.20f\n", z);
+    int n;
+    printf("enter the value of n:\n");
+    scanf("%i", &n);
+    oddeven(n);
     return 0;
+}
+void oddeven(int n)
+{
+
+    if (n == 1 || n % 2 != 0)
+    {
+        printf("this number is odd\n");
+    }
+    else 
+    {
+        printf("this is even number\n");
+        
+    }
+    
+
+    
 }

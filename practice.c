@@ -329,43 +329,6 @@ int main()
     printf("The division of %f and %f is %f", a, b, a / b);
     return 0;
 }
-
-#include <stdio.h>
-
-int number()
-{
-    int a;
-    printf("Enter a number:\n");
-    scanf("%d", &a);
-    return a;
-}
-int main()
-{
-
-    int c;
-    c = number();
-    printf("The number enterred is:%d\n", c);
-
-    return 0;
-}
-#include <stdio.h>
-
-int number()
-{
-    int a;
-    printf("Enter a number:\n");
-    scanf("%d", &a);
-    return a;
-}
-int main()
-{
-
-    int c;
-    c = number();
-    printf("The number enterred is:%d\n", c);
-
-    return 0;
-}
 #include <stdio.h>
 
 void helloji()
@@ -426,7 +389,7 @@ int factorial(int number)
     else
     {
 
-        return (number * factorial(number - 1));
+        return (number * fact(number - 1));
     }
 }
 
@@ -436,7 +399,7 @@ int main()
     int num;
     printf("Enter the number you want the factorial of :\n");
     scanf("%d", &num);
-    printf("The factorial of %d is %d\n", num, factorial(num));
+    printf("The factorial of %d is %d\n", num, fact(num));
 
     return 0;
 }
@@ -1424,7 +1387,8 @@ int main()
 }
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int n, i = 1;
 
     printf("Enter the value of n: ");
@@ -1432,7 +1396,8 @@ int main() {
 
     printf("The first %d natural numbers are:\n", n);
 
-    do {
+    do
+    {
         printf("%d ", i);
         i++;
     } while (i <= n);
@@ -1441,21 +1406,21 @@ int main() {
 }
 #include <stdio.h>
 
-
 int main()
 {
     int n;
-    int i=1;
+    int i = 1;
     printf("Enter the first n natural numbers:\n");
-    scanf("%d",&n);
+    scanf("%d", &n);
     do
     {
-        
-        printf("%d\n",i);
-        i++;    
-    } while ( i<=n);
-    
-    return 0;}
+
+        printf("%d\n", i);
+        i++;
+    } while (i <= n);
+
+    return 0;
+}
 
 #include <stdio.h>
 
@@ -1469,4 +1434,125 @@ int main()
     double z = (double)x / (double)y;
     printf(" x divided by y is %.20f\n", z);
     return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    int num, reversed = 0, remainder;
+
+    // Prompt the user to enter a number
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    // Loop to reverse the number
+    while (num != 0)
+    {
+        remainder = num % 10;                 // Get the last digit
+        reversed = reversed * 10 + remainder; // Append the digit to reversed
+        num /= 10;                            // Remove the last digit
+    }
+
+    printf("Reversed number: %d\n", reversed);
+
+    return 0;
+}
+#include <stdio.h>
+void factorial(int n);
+int main()
+{
+    int n;
+    printf("enter the value for n:\n");
+    scanf("%i", &n);
+    factorial(n);
+    return 0;
+}
+void factorial(int n)
+{
+
+    int v = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        v *= i;
+    }
+    printf("The factorial of %i is %i\n", n, v);
+}
+#include <stdio.h>
+
+void number(int a, int b);
+int main()
+{
+    int a, b;
+    number(a, b);
+    return 0;
+}
+void number(int a, int b)
+{
+    int n;
+    printf("enter the value of n:\n");
+    scanf("%i", &n);
+    printf("enter the value of a:\n");
+    scanf("%i", &a);
+    printf("enter the value of b:\n");
+    scanf("%i", &b);
+
+    if (n % a == 0)
+    {
+        printf("The number is divisible by a but not b.\n");
+    }
+    else
+    {
+        printf("The number is divisible by b but not a.\n");
+    }
+}
+#include <stdio.h>
+
+void stars(int n);
+int main()
+{
+    int n;
+    printf("enter the value for n:\n");
+    scanf("%i", &n);
+    stars(n);
+    return 0;
+}
+void stars(int n)
+{
+
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= 2 * i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+#include <stdio.h>
+
+void oddeven(int n);
+int main()
+{
+    int n;
+    printf("enter the value of n:\n");
+    scanf("%i", &n);
+    oddeven(n);
+    return 0;
+}
+void oddeven(int n)
+{
+
+    if (n == 1 || n % 2 != 0)
+    {
+        printf("this number is odd\n");
+    }
+    else 
+    {
+        printf("this is even number\n");
+        
+    }
+    
+
+    
 }
