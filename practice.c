@@ -1547,12 +1547,130 @@ void oddeven(int n)
     {
         printf("this number is odd\n");
     }
-    else 
+    else
     {
         printf("this is even number\n");
-        
     }
-    
+}
+#include <stdio.h>
 
+int main()
+{
+    int a, b;
+    printf("enter the first number:\n");
+    scanf("%i", &a);
+    printf("enter the second number:\n");
+    scanf("%i", &b);
+
+    if (a > b)
+    {
+        printf("The smallest number is %i\n", b);
+    }
+    else
+    {
+        printf("The smallest number is %i\n", a);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    char a;
+    printf("write the character:\n");
+    scanf("%c", &a);
+    if (a >= 97 && a <= 122 || a >= 65 && a <= 91)
+    {
+        printf("The character provided as a input is not a digit.\n");
+    }
+    else
+    {
+        printf("The character provided as a input is  a digit.\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    char a;
+    printf("Enter the character :\n");
+    scanf("%c", &a);
+    if (a >= 65 && a <= 91)
+    {
+        printf("This is a uppercase character.\n");
+    }
+    else
+    {
+        printf("This is a lowercase character.\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+int fact(int n)
+{
+    int v = 1;
+
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+
+    else
+    {
+
+        for (int i = 2; i <= n; i++)
+        {
+            v *= i;
+        }
+        return v;
+    }
+}
+int main()
+{
+    int n;
+    printf("enter the number which you want the factorial of:\n");
+    scanf("%d", &n);
+    int factorial = fact(n);
+    printf("The factorial of %d is %d\n", n, factorial);
+    return 0;
+}
+#include <stdio.h>
+
+int add(int n);
+int main()
+{
+    int n;
+    printf("Enter the number upto which you want the sum of natural numbers:\n");
+    scanf("%i",&n);
+    int sum=add(n);
+    printf("The sum upto %i natural numbers is %i. \n",n,sum);
+    return 0;
+}
+
+int add(int n){
+    int sum=0;
+    for (int i = 1; i <=n; i++)
+    {
+        sum += i;
+    }
+    return sum;
     
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the numebr which you want the multiplication table of:\n");
+    scanf("%i", &n);
+    for (int i = 1; i <= 10; i++)
+    {
+        printf("%i * %i = %i\n", n, i, n * i);
+    }
+
+    return 0;
 }

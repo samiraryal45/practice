@@ -1,15 +1,20 @@
 #include <stdio.h>
 
+
 int main()
 {
-    char str[] = {"Hello ji"};
-
-    // Loop through each character in the string until we hit the null terminator
-    for (int i = 0; str[i] != '\0'; i++)
+    char a;
+    printf("Enter the character :\n");
+    scanf("%c",&a);
+    if (a>=65 &&  a<=91)
     {
-        printf("%c", str[i]);
+      printf("This is a uppercase character.\n");
     }
-
-    printf("\n"); // Print a newline after the loop
+    else
+    {
+      printf("This is a lowercase character.\n");
+      
+    }
+    
     return 0;
 }

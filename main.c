@@ -1,27 +1,18 @@
 #include <stdio.h>
 
-void oddeven(int n);
+
 int main()
 {
-    int n;
-    printf("enter the value of n:\n");
-    scanf("%i", &n);
-    oddeven(n);
-    return 0;
-}
-void oddeven(int n)
-{
-
-    if (n == 1 || n % 2 != 0)
+    for (int i = 1; i <=10; i++)
     {
-        printf("this number is odd\n");
-    }
-    else 
-    {
-        printf("this is even number\n");
+        if (i ==6)
+        {
+            continue;
+        }
+        printf("%i\n",i);
+        
         
     }
     
-
-    
+    return 0;
 }
