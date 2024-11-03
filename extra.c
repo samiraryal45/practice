@@ -1,20 +1,25 @@
 #include <stdio.h>
 
+void primenumbers(int a,int b){
 
-int main()
-{
-    char a;
-    printf("Enter the character :\n");
-    scanf("%c",&a);
-    if (a>=65 &&  a<=91)
+    for (int i = a; i < b; i++)
     {
-      printf("This is a uppercase character.\n");
-    }
-    else
-    {
-      printf("This is a lowercase character.\n");
-      
+        if ( b %a== 0)
+        {
+            printf("%i\n",i);
+        }
+        
     }
     
+}
+int main()
+{
+    int a,b;
+    printf("enter the first range of number:\n");
+    scanf("%i",&a);
+    printf("enter the second range of number:\n");
+    scanf("%i",&b);
+    primenumbers(a,b);
+
     return 0;
 }

@@ -1645,20 +1645,20 @@ int main()
 {
     int n;
     printf("Enter the number upto which you want the sum of natural numbers:\n");
-    scanf("%i",&n);
-    int sum=add(n);
-    printf("The sum upto %i natural numbers is %i. \n",n,sum);
+    scanf("%i", &n);
+    int sum = add(n);
+    printf("The sum upto %i natural numbers is %i. \n", n, sum);
     return 0;
 }
 
-int add(int n){
-    int sum=0;
-    for (int i = 1; i <=n; i++)
+int add(int n)
+{
+    int sum = 0;
+    for (int i = 1; i <= n; i++)
     {
         sum += i;
     }
     return sum;
-    
 }
 #include <stdio.h>
 
@@ -1671,6 +1671,188 @@ int main()
     {
         printf("%i * %i = %i\n", n, i, n * i);
     }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 1; i <= 10; i++)
+    {
+        if (i == 6)
+        {
+            continue;
+        }
+        printf("%i\n", i);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 5; i < 50; i = i + 1)
+    {
+        if (i % 2 != 0)
+        {
+            printf("%i\n", i);
+        }
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int fact(int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * fact(n - 1);
+    }
+}
+
+int main()
+{
+    int n;
+    printf("enter the number which you want the factorial of:\n");
+    scanf("%i", &n);
+    int factorial = fact(n);
+    printf("The factorial of %i is %i\n.", n, factorial);
+    return 0;
+}
+#include <stdio.h>
+void odd();
+void even();
+int n = 1;
+
+int main()
+{
+    odd();
+    return 0;
+}
+
+void odd()
+{
+    if (n <= 10)
+    {
+
+        printf("%d\n", n + 1);
+        n++;
+        even();
+    }
+}
+void even()
+{
+
+    if (n <= 10)
+    {
+        printf("%d\n", n - 1);
+        n++;
+        odd();
+    }
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int sum=0;
+    for (int i = 5; i <=50; i++)
+    {
+        sum +=i;
+    }
+    printf("The sum of the numbers from 5 to 50 including themselves is %i\n",sum);
+    
+    return 0;
+}
+#include <stdio.h>
+
+void printstar(int n);
+
+int main()
+{
+    int n;
+    printf("Enter the no. of lines you want the star to be printed:\n");
+    scanf("%i",&n);
+    printstar(n);
+    return 0;
+}
+void printstar(int n)
+{
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= n; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+#include <stdio.h>
+void prime(int n)
+{
+
+    if ( n == 1)
+    {
+        printf("It is  not prime number");
+    }
+    else
+    {
+        for (int i = 2; i < n; i++)
+        {
+            if (n %i ==0)
+            {
+                printf("It is not a prime number.\n");
+                return;
+            }
+            
+        }
+        printf("It is a prime number");
+        
+    }
+    
+}
+int main()
+{
+    int n;
+    printf("enter a number:\n");
+    scanf("%i", &n);
+    prime(n);
+    return 0;
+}
+#include <stdio.h>
+
+int is_prime(int num) {
+    if (num <= 1) return 0; // 0 and 1 are not prime numbers
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) return 0; // num is divisible by i, not prime
+    }
+    return 1; // num is prime
+}
+
+int main() {
+    int start, end;
+
+    // Input the range
+    printf("Enter the start of the range: ");
+    scanf("%d", &start);
+    printf("Enter the end of the range: ");
+    scanf("%d", &end);
+
+    printf("Prime numbers between %d and %d are:\n", start, end);
+    for (int i = start; i <= end; i++) {
+        if (is_prime(i)) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
 
     return 0;
 }
