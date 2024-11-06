@@ -1856,3 +1856,230 @@ int main() {
 
     return 0;
 }
+#include <stdio.h>
+void average(float a,float b, float c){
+    float avg = (a+b+c)/3;
+    printf("The average of the three input values is %.2f\n",avg);
+}
+int main()
+{
+    float a, b, c;
+    printf("enter the value of a:\n");
+    scanf("%f", &a);
+    printf("enter the value of b:\n");
+    scanf("%f", &b);
+    printf("enter the value of c:\n");
+    scanf("%f", &c);
+    average(a,b,c);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    float c, f;
+    printf("Enter the temperature in celsus:\n");
+    scanf("%f", &c);
+    f = 9 * c / 5 + 32;
+    printf("The respective scale of %.2f celsius is %.2f fahrenheit.\n",c,f);
+    return 0;
+}
+#include <stdio.h>
+
+int recursivesum(int n)
+{
+
+    if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n + recursivesum(n - 1);
+    }
+}
+int main()
+{
+    int n;
+    printf("Enter the first n numbers to calculate the sum:\n");
+    scanf("%d", &n);
+    int sum = recursivesum(n);
+    printf("The sum of first %d natural numbers is %d\n", n, sum);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int table[10];
+
+    // Store multiplication table of 5 in the array
+    for (int i = 0; i < 10; i++) {
+        table[i] = 5 * (i + 1);
+    }
+        
+    // Print the multiplication table
+    printf("Multiplication Table of 5:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("5 x %d = %d\n", i+1, table[i]);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+void primenumbers(int a,int b){
+
+    
+    for (int i = a; i < b; i++)
+    {
+        if ( b %a== 0)
+        {
+            printf("%i\n",i);
+        }
+        
+    }
+    
+}
+int main()
+{
+    int a,b;
+    printf("enter the first range of number:\n");
+    scanf("%i",&a);
+    printf("enter the second range of number:\n");
+    scanf("%i",&b);
+    primenumbers(a,b);
+
+    return 0;
+}
+#include <stdio.h>
+
+void reverse(int arr[])
+{
+    for (int i = 0; i < 10 / 2; i++)
+    {
+        int h = arr[i];
+        arr[i] = arr[9 - i];
+        arr[9 - i] = h;
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+}
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    printf("Before reversing:\n");
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("After reversing:\n");
+    reverse(arr);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int table[3][10] = {{2, 4, 6, 8, 10, 12, 14, 16, 18, 20},
+                        {7, 14, 21, 28, 35, 42, 49, 56, 63, 70},
+                        {9, 18, 27, 36, 45, 54, 63, 72, 81, 90}};
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            printf("%d ", table[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int table[3][10];
+    for (int i = 0; i < 10; i++)
+    {
+
+        table[0][i] = 2 * (i + 1);
+        table[1][i] = 7 * (i + 1);
+        table[2][i] = 9 * (i + 1);
+    }
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            printf("%d ", table[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+// C Program for Checking value is
+// Prime or not
+// #include <stdbool.h>
+#include <stdio.h>
+
+int main() {
+    int n = 3;
+
+    int cnt = 0;
+
+    // If number is less than/equal to 1,
+    // it is not prime
+    if (n <= 1)
+        printf("%d is NOT prime\n", n);
+    else {
+
+        // Check for divisors from 1 to n
+        for (int i = 1; i <= n; i++) {
+
+            // Check how many number is divisible
+            // by n
+            if (n % i == 0)
+                cnt++;
+        }
+
+        // If n is divisible by more than 2 numbers
+        // then it is not prime
+        if (cnt > 2)
+            printf("%d is NOT prime\n", n);
+
+        // else it is prime
+        else
+            printf("%d is prime", n);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+void numbers(int n)
+{
+    if (n > 0)
+    {
+        printf("The number entered is positive.\n");
+    }
+    else if (n < 0)
+    {
+        printf("The number entered is negative.\n");
+    }
+    else
+    {
+        printf("The number entered is zero.\n");
+    }
+}
+int main()
+{
+    int n;
+    printf("enter a number\n");
+    scanf("%d", &n);
+    numbers(n);
+    return 0;
+}

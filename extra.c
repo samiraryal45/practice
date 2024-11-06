@@ -1,25 +1,37 @@
+// C Program for Checking value is
+// Prime or not
+// #include <stdbool.h>
 #include <stdio.h>
 
-void primenumbers(int a,int b){
+int main() {
+    int n = 3;
 
-    for (int i = a; i < b; i++)
-    {
-        if ( b %a== 0)
-        {
-            printf("%i\n",i);
+    int cnt = 0;
+
+    // If number is less than/equal to 1,
+    // it is not prime
+    if (n <= 1)
+        printf("%d is NOT prime\n", n);
+    else {
+
+        // Check for divisors from 1 to n
+        for (int i = 1; i <= n; i++) {
+
+            // Check how many number is divisible
+            // by n
+            if (n % i == 0)
+                cnt++;
         }
-        
+
+        // If n is divisible by more than 2 numbers
+        // then it is not prime
+        if (cnt > 2)
+            printf("%d is NOT prime\n", n);
+
+        // else it is prime
+        else
+            printf("%d is prime", n);
     }
-    
-}
-int main()
-{
-    int a,b;
-    printf("enter the first range of number:\n");
-    scanf("%i",&a);
-    printf("enter the second range of number:\n");
-    scanf("%i",&b);
-    primenumbers(a,b);
 
     return 0;
 }
