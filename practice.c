@@ -1759,16 +1759,15 @@ void even()
 }
 #include <stdio.h>
 
-
 int main()
 {
-    int sum=0;
-    for (int i = 5; i <=50; i++)
+    int sum = 0;
+    for (int i = 5; i <= 50; i++)
     {
-        sum +=i;
+        sum += i;
     }
-    printf("The sum of the numbers from 5 to 50 including themselves is %i\n",sum);
-    
+    printf("The sum of the numbers from 5 to 50 including themselves is %i\n", sum);
+
     return 0;
 }
 #include <stdio.h>
@@ -1779,7 +1778,7 @@ int main()
 {
     int n;
     printf("Enter the no. of lines you want the star to be printed:\n");
-    scanf("%i",&n);
+    scanf("%i", &n);
     printstar(n);
     return 0;
 }
@@ -1799,7 +1798,7 @@ void printstar(int n)
 void prime(int n)
 {
 
-    if ( n == 1)
+    if (n == 1)
     {
         printf("It is  not prime number");
     }
@@ -1807,17 +1806,14 @@ void prime(int n)
     {
         for (int i = 2; i < n; i++)
         {
-            if (n %i ==0)
+            if (n % i == 0)
             {
                 printf("It is not a prime number.\n");
                 return;
             }
-            
         }
         printf("It is a prime number");
-        
     }
-    
 }
 int main()
 {
@@ -1829,15 +1825,20 @@ int main()
 }
 #include <stdio.h>
 
-int is_prime(int num) {
-    if (num <= 1) return 0; // 0 and 1 are not prime numbers
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0) return 0; // num is divisible by i, not prime
+int is_prime(int num)
+{
+    if (num <= 1)
+        return 0; // 0 and 1 are not prime numbers
+    for (int i = 2; i * i <= num; i++)
+    {
+        if (num % i == 0)
+            return 0; // num is divisible by i, not prime
     }
     return 1; // num is prime
 }
 
-int main() {
+int main()
+{
     int start, end;
 
     // Input the range
@@ -1847,8 +1848,10 @@ int main() {
     scanf("%d", &end);
 
     printf("Prime numbers between %d and %d are:\n", start, end);
-    for (int i = start; i <= end; i++) {
-        if (is_prime(i)) {
+    for (int i = start; i <= end; i++)
+    {
+        if (is_prime(i))
+        {
             printf("%d ", i);
         }
     }
@@ -1857,9 +1860,10 @@ int main() {
     return 0;
 }
 #include <stdio.h>
-void average(float a,float b, float c){
-    float avg = (a+b+c)/3;
-    printf("The average of the three input values is %.2f\n",avg);
+void average(float a, float b, float c)
+{
+    float avg = (a + b + c) / 3;
+    printf("The average of the three input values is %.2f\n", avg);
 }
 int main()
 {
@@ -1870,7 +1874,7 @@ int main()
     scanf("%f", &b);
     printf("enter the value of c:\n");
     scanf("%f", &c);
-    average(a,b,c);
+    average(a, b, c);
     return 0;
 }
 #include <stdio.h>
@@ -1881,7 +1885,7 @@ int main()
     printf("Enter the temperature in celsus:\n");
     scanf("%f", &c);
     f = 9 * c / 5 + 32;
-    printf("The respective scale of %.2f celsius is %.2f fahrenheit.\n",c,f);
+    printf("The respective scale of %.2f celsius is %.2f fahrenheit.\n", c, f);
     return 0;
 }
 #include <stdio.h>
@@ -1910,45 +1914,46 @@ int main()
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int table[10];
 
     // Store multiplication table of 5 in the array
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++)
+    {
         table[i] = 5 * (i + 1);
     }
-        
+
     // Print the multiplication table
     printf("Multiplication Table of 5:\n");
-    for (int i = 0; i < 10; i++) {
-        printf("5 x %d = %d\n", i+1, table[i]);
+    for (int i = 0; i < 10; i++)
+    {
+        printf("5 x %d = %d\n", i + 1, table[i]);
     }
 
     return 0;
 }
 #include <stdio.h>
 
-void primenumbers(int a,int b){
+void primenumbers(int a, int b)
+{
 
-    
     for (int i = a; i < b; i++)
     {
-        if ( b %a== 0)
+        if (b % a == 0)
         {
-            printf("%i\n",i);
+            printf("%i\n", i);
         }
-        
     }
-    
 }
 int main()
 {
-    int a,b;
+    int a, b;
     printf("enter the first range of number:\n");
-    scanf("%i",&a);
+    scanf("%i", &a);
     printf("enter the second range of number:\n");
-    scanf("%i",&b);
-    primenumbers(a,b);
+    scanf("%i", &b);
+    primenumbers(a, b);
 
     return 0;
 }
@@ -2026,7 +2031,8 @@ int main()
 // #include <stdbool.h>
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int n = 3;
 
     int cnt = 0;
@@ -2035,10 +2041,12 @@ int main() {
     // it is not prime
     if (n <= 1)
         printf("%d is NOT prime\n", n);
-    else {
+    else
+    {
 
         // Check for divisors from 1 to n
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++)
+        {
 
             // Check how many number is divisible
             // by n
@@ -2081,5 +2089,319 @@ int main()
     printf("enter a number\n");
     scanf("%d", &n);
     numbers(n);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter a number\n");
+    scanf("%d", &n);
+
+    if (n % 2 == 0)
+    {
+        printf("The number entered is even");
+    }
+    else
+    {
+        printf("The number is odd\n");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    char n;
+    printf("enter a character.\n");
+    scanf("%c", &n);
+    if (n == 'a' || n == 'e' || n == 'i' || n == 'o' || n == 'u' || n == 'A' || n == 'E' || n == 'I' || n == 'O' || n == 'U')
+
+    {
+        printf("The character entered is vowel.\n");
+    }
+    else
+    {
+        printf("The character entered is consonant.\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n, sum = 0;
+    printf("enter the n natural  numbers.\n");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        sum += i;
+    }
+    printf("The sum upto %d natural numbers is %d\n", n, sum);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    printf("The alphabets are :\n");
+    for (char i = 65; i <= 90; i++)
+    {
+
+        printf("%c ", i);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the year:\n");
+    scanf("%d", &n);
+    if (n % 4 == 0 && n % 100 != 0 || n % 400 == 0)
+    {
+        printf("%d is a leap year.\n", n);
+    }
+    else
+    {
+        printf("%d is not a leap year.\n", n);
+    }
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the year:\n");
+    scanf("%d", &n);
+
+    if (n % 400 == 0)
+    {
+        printf("%d is a leap year.\n", n);
+    }
+    else if (n % 100 == 0)
+    {
+        printf("%d is not a leap year.\n", n);
+    }
+    else if (n % 4 == 0)
+    {
+        printf("%d is a leap year.\n", n);
+    }
+    else
+    {
+        printf("%d is not a leap year.\n", n);
+    }
+
+    return 0;
+}
+
+// C Program to make a Simple Calculator using 
+// switch-case statements
+#include <stdio.h>
+#include <float.h>
+
+int main() {
+    char op;
+    double a, b, res;
+
+    // Read the operator
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &op);
+
+    // Read the two numbers
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &a, &b);
+    
+    // Define all four operations in the corresponding
+    // switch-case
+    switch (op) {
+    case '+':
+        res = a + b;
+        break;
+    case '-':
+        res = a - b;
+        break;
+    case '*':
+         res = a * b;
+        break;
+    case '/':
+        res = a / b;
+        break;
+    default:
+        printf("Error! Incorrect Operator Value\n");
+        res = -DBL_MAX;
+    }
+    if(res!=-DBL_MAX)
+      printf("%.2lf", res);
+    
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter the number which you want the multiplication table of:\n");
+    scanf("%d", &n);
+    printf("The multiplication table of %d is as follows:\n", n);
+    for (int i = 1; i <= 10; i++)
+    {
+        printf("%d * %d = %d\n", n, i, n * i);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int a=0,b=1,c,n;
+    printf("Enter the n no. of terms of fibonacci series.\n");
+    scanf("%d",&n);
+    for (int i = 1; i <=n; i++)
+    {
+        printf("%d ",a);
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    printf("enter two numbers.\n");
+    scanf("%d %d", &a, &b);
+    c = (a > b) ? a : b;
+    while (1)
+    {
+        if (c % a == 0 && c % b == 0)
+        {
+            printf("The lcm of %d and %d is %d \n", a, b, c);
+            break;
+        }
+        c++;
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    printf("Enter a  number.\n");
+    scanf("%d",&n);
+    int a=0;
+    while (n>0)
+    {
+        a=a*10 + n %10;
+        n /=10;
+    }
+    printf("The reversed number is %d\n",a);
+    return 0;
+}
+#include <stdio.h>
+
+int reverse(int n)
+{
+
+    int a = 0;
+    while (n > 0)
+    {
+        a = a * 10 + n % 10;
+        n /= 10;
+    }
+    return a;
+}
+
+int palindrome(int n)
+{
+    if (n == revers(n))
+    {
+        printf("The entered number is palindrome.\n");
+    }
+    else
+    {
+        printf("The entered number is not palindrome.\n");
+    }
+}
+int main()
+{
+    int n;
+    printf("Enter a number.\n");
+    scanf("%d", &n);
+    palindrome(n);
+    return 0;
+}
+#include <stdio.h>
+int prime(int n)
+{
+
+    if (n <= 1)
+    {
+        printf("error\n");
+        
+    }
+    else
+    {
+
+        for (int i = 2; i < n; i++)
+        {
+            if (n % i == 0)
+            {
+                printf("%d is not a prime number.\n", n);
+                return 0;
+            }
+        }
+        printf("%d is  a prime number.\n", n);
+    }
+}
+int main()
+{
+    int n;
+    printf("Enter a  number.\n");
+    scanf("%d", &n);
+
+    prime(n);
+    return 0;
+}
+#include <stdio.h>
+
+int isPrime(int num) {
+    if (num <= 1)
+        return 0;
+    for (int i = 2; i*i  <= num; i++) {
+        if (num % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
+int main() {
+    int lower, upper;
+
+    printf("Enter two numbers (intervals): ");
+    scanf("%d %d", &lower, &upper);
+
+    printf("Prime numbers between %d and %d are: ", lower, upper);
+
+    for (int i = lower; i <= upper; i++) {
+        if (isPrime(i))
+            printf("%d ", i);
+    }
+
     return 0;
 }
