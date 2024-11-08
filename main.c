@@ -1,23 +1,30 @@
 #include <stdio.h>
-void primenumbers(int a, int b)
-{
 
-    for (int i = a; i < b; i++)
+void neon(int n){
+    int square = n*n;
+    int digit,sum=0;
+    while (square !=0)
     {
-        if (b % a == 0)
-        {
-            printf("%i\n", i);
-        }
+        digit =square %10;
+        sum +=digit;
+        square /=10;
     }
+    if (sum==n)
+    {
+        printf("%d is a neon number.\n",n);
+    }
+    else{
+        printf("%d is not a neon number.\n",n);
+
+    }
+    
+    
 }
 int main()
 {
-    int a, b;
-    printf("enter the first range of number:\n");
-    scanf("%i", &a);
-    printf("enter the second range of number:\n");
-    scanf("%i", &b);
-    primenumbers(a, b);
-
+    int n;
+    printf("enter a number:\n");
+    scanf("%d",&n);
+    neon(n);
     return 0;
 }
