@@ -2435,3 +2435,258 @@ int main()
     neon(n);
     return 0;
 }
+#include <stdio.h>
+
+
+int main()
+{
+    int n,rev_num;
+    printf("enter a number.\n");
+    scanf("%d",&n);
+    printf("The reverse of %d is\n",n);
+
+    while (n !=0)
+    {
+        rev_num=rev_num*10 +n%10;
+        n /=10;
+    }
+    printf( "%d \n",rev_num);
+    
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    printf("enter a natural number.\n");
+    scanf("%d",&n);
+    printf("The factors of %d are ",n);
+    for (int i = 1; i <=n; i++)
+    {
+        if (n%i==0)
+        {
+            printf("%d ",i);
+        }
+        
+    }
+    
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a = 0, b = 1, c, n;
+    int sum = 0;
+    printf("enter n no. of terms .\n");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        if (i % 2 == 0)
+        {
+            sum += a;
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        else{
+            return ;
+        }
+    }
+    printf("The sum upto %d fibonaccin terms is %d\n", n, sum);
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    printf("enter the no. of lines you want the pyramid pattern to be printed:\n");
+    scanf("%d",&n);
+    for (int i = n; i >=1; i--)
+    {
+        for (int j = 1; j <=i; j++)
+        {
+            printf("%d ",i);
+
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    printf("enter the no. of rows for pyramid:\n");
+    scanf("%d",&n);
+    for (int i = 0; i<=n; i++)
+    {
+        for (int j = 0; j <i; j++)
+        {
+            printf("%d ",i);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    printf("enter the no. of rows for triangle:\n");
+    scanf("%d",&n);
+    for (int i = 0; i <=n; i++)
+    {
+        for (int j = 0; j <i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the no. of rows for  inverted pyramid:\n");
+    scanf("%d", &n);
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf(" ");
+        }
+        for (int k = 0; k < n - i; k++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+// C program to print
+// inverted pyramid
+// pattern
+#include <stdio.h>
+
+// Driver code
+int main()
+{
+int rows = 8, i, j, space;
+
+for (i = rows; i >= 1; --i) 
+{
+	// Loop to print the blank space
+	for (space = 0; 
+			space < rows - i; ++space)
+		printf(" ");
+	
+	// Loop to print the half of 
+	// the star triangle
+	for (j = i; j <= 2 * i - 1; ++j)
+		printf("* ");
+	
+	// Loop to print the rest of 
+	// the star triangle
+	for (j = 0; j < i - 1; ++j)
+		printf("* ");
+	printf("\n");
+}
+
+return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the number:\n");
+    scanf("%d", &n);
+    for (int i = 0; i <= n; i++)
+    {
+        for (int k = 0; k <n-i; k++)
+        {
+            printf(" ");
+        }
+        
+        for (int j = 0; j <= i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+// C program to illustrate the above
+// given pattern of numbers.
+#include <stdio.h>
+
+int main()
+{
+	int n = 4, i, j, num = 1, gap;
+
+	gap = n - 1;
+
+	for (j = 1; j <= n; j++) {
+		num = j;
+
+		for (i = 1; i <= gap; i++)
+			printf(" ");
+
+		gap--;
+
+		for (i = 1; i <= j; i++) {
+			printf("%d", num);
+			num++;
+		}
+		num--;
+		num--;
+		for (i = 1; i < j; i++) {
+			printf("%d", num);
+			num--;
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the number:\n");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        for (int k = 0; k <=n-i; k++)
+        {
+            printf(" ");
+        }
+        
+        for (int j = 0; j < i; j++)
+        {
+            printf("%d ",i);
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

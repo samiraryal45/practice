@@ -1,27 +1,33 @@
+// C program to illustrate the above
+// given pattern of numbers.
 #include <stdio.h>
 
-int isPrime(int num) {
-    if (num <= 1)
-        return 0;
-    for (int i = 2; i*i  <= num; i++) {
-        if (num % i == 0)
-            return 0;
-    }
-    return 1;
-}
+int main()
+{
+	int n = 4, i, j, num = 1, gap;
 
-int main() {
-    int lower, upper;
+	gap = n - 1;
 
-    printf("Enter two numbers (intervals): ");
-    scanf("%d %d", &lower, &upper);
+	for (j = 1; j <= n; j++) {
+		num = j;
 
-    printf("Prime numbers between %d and %d are: ", lower, upper);
+		for (i = 1; i <= gap; i++)
+			printf(" ");
 
-    for (int i = lower; i <= upper; i++) {
-        if (isPrime(i))
-            printf("%d ", i);
-    }
+		gap--;
 
-    return 0;
+		for (i = 1; i <= j; i++) {
+			printf("%d", num);
+			num++;
+		}
+		num--;
+		num--;
+		for (i = 1; i < j; i++) {
+			printf("%d", num);
+			num--;
+		}
+		printf("\n");
+	}
+
+	return 0;
 }
