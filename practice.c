@@ -2690,3 +2690,276 @@ int main()
 
     return 0;
 }
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    char a='1';
+    printf("enter the no. of lines:\n");
+    scanf("%d",&n);
+    for (int i = 1; i <=n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf("%d ",i);
+        }
+        printf("\n");
+        a++;
+    }
+    
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int n;
+    char a='A';
+    printf("enter the no. of rows:\n");
+    scanf("%d",&n);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            printf("%c ",a);
+            a++;
+        }
+        
+        printf("\n");
+        
+        
+    }
+    
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the no. of lines or rows:\n");
+    scanf("%d", &n);
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int k = 1; k < n - i; k++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j <= 2 * i; j++)
+        {
+          
+            if (j == 0 || j == 2 * i)
+
+                printf("*");
+
+            else
+
+                printf(" ");
+        }
+        printf("\n");
+    }
+    for ( int i = 0; i < 2 * n - 1; i++) {
+		printf("*");
+	}
+	printf("\n");
+
+    return 0;
+}
+// C Program to Demonstrate
+// a Hollow Star Pyramid
+#include <stdio.h>
+
+int main()
+{
+	int i, space, n = 5, j = 0;
+
+	// first for loop is used to
+	// iterate number of rows
+	for (i = 0; i < n - 1; i++) {
+
+		// second for loop is used to print spaces
+		for (space = 1; space < n - i; space++) {
+			printf(" ");
+		}
+		// third for loop is used
+		// to print the required
+		// pattern
+		for (j = 0; j <= 2 * i; j++) {
+			if (j == 0 || j == 2 * i)
+				printf("*");
+			else
+				printf(" ");
+		}
+		// print the new line after every row
+		printf("\n");
+	}
+	// used to print last row
+	for (i = 0; i < 2 * n - 1; i++) {
+		printf("*");
+	}
+	printf("\n");
+	return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the no. of lines you want the stars to be printed:\n");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i ; j++)
+        {
+            printf(" ");
+        }
+        for (int k = 0; k <= n * 2 - (2 * i - 1); k++)
+        {
+            if (k == 0 || i == 0)
+            {
+                printf("*");
+            }
+            else if (k == n * 2 - (2 * i - 1))
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the no. of lines or rows:\n");
+    scanf("%d", &n);
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int k = 1; k < n - i; k++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j <= 2 * i; j++)
+        {
+          
+            if (j == 0 || j == 2 * i)
+
+                printf("*");
+
+            else
+
+                printf(" ");
+        }
+        printf("\n");
+    }
+    for ( int i = 0; i < 2 * n - 1; i++) {
+		printf("*");
+	}
+	printf("\n");
+
+    return 0;
+}
+#include <stdio.h>
+
+int prime(int n)
+{
+    if (n <= 1)
+    {
+        printf("%d is not a prime number.", n);
+    }
+    else
+    {
+        for (int i = 2; i < n; i++)
+        {
+            if (n % i == 0)
+            {
+                printf("%d is not a prime number.", n);
+                return 0;
+            }
+        }
+        printf("%d is a prime number.", n);
+    }
+}
+int main()
+{
+    int n;
+    printf("enter the number:\n");
+    scanf("%d", &n);
+    prime(n);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int s, l, prime;
+    ;
+    printf("enter the starting range of interval:\n");
+    scanf("%i", &s);
+    printf("enter the ending range of interval:\n");
+    scanf("%i", &l);
+    printf("Prime numbers between %d and %d are:\n", s, l);
+
+    for (int i = s; i <= l; i++)
+    {
+        prime = 1;
+        for (int j = 2; j < i; j++)
+        {
+            if (i % j == 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+        if (prime)
+        {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    int s, l, prime;
+    ;
+    printf("enter the starting range of interval:\n");
+    scanf("%i", &s);
+    printf("enter the ending range of interval:\n");
+    scanf("%i", &l);
+    printf("Prime numbers between %d and %d are:\n", s, l);
+
+    for (int i = s; i <= l; i++)
+    {
+        prime =1;
+        for (int j = 2; j <i; j++)
+        {
+            if (i %j==0)
+            {
+                prime =0;
+                break;
+            }
+            
+        }
+        if (prime)
+        {
+            printf("%d ",i);
+        }
+        
+    }
+    
+    return 0;
+}
