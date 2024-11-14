@@ -2963,3 +2963,73 @@ int main()
     
     return 0;
 }
+#include <stdio.h>
+
+int main()
+{
+    int x, y;
+    printf("enter the value of x:\n");
+    scanf("%d", &x);
+    printf("enter the value of y:\n");
+    scanf("%d", &y);
+    printf("After swaping.\n");
+    x=x+y;
+    y=x-y;
+    x=x-y;
+    printf("The value of x is %d\n ",x);
+    printf("The value of y is %d\n ",y);
+
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int days, months, week, remainder;
+    printf("enter the number of days:\n");
+    scanf("%d", &days);
+    months = days / 30;
+    remainder = days % 30;
+    week = remainder /7;
+    remainder = remainder%7;
+    printf("%d days = %d months , %d weeks and %d days",days,months,week,remainder);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n, digits, sum = 0;
+    printf("enter a number to find to sum of it's digits.\n");
+    scanf("%d", &n);
+    printf("The sum of the digits of %d is ", n);
+
+    while (n != 0)
+    {
+        digits = n % 10;
+        n /= 10;
+        sum += digits;
+    }
+    printf("%d.", sum);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter a year.\n");
+    scanf("%d", &n);
+    if (n % 4 == 0 && n % 100 != 0 || n % 400 == 0)
+    {
+        printf("%d is a leap year.", n);
+    }
+    else
+    {
+        printf("%d is not a leap year.", n);
+    }
+
+    return 0;
+}

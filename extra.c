@@ -1,29 +1,34 @@
 #include <stdio.h>
 
-int prime(int n)
+int fibonacci(int n)
 {
-    if (n <= 1)
+    if (n < 2)
     {
-        printf("%d is not a prime number.\n", n);
+        return n;
     }
     else
     {
-        for (int i = 2; i < n; i++)
-        {
-            if (n % i == 0)
-            {
-                printf("%d is not a prime number.\n", n);
-                return 0;
-            }
-        }
-        printf("%d is  a prime number.\n", n);
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
+
 int main()
 {
     int n;
-    printf("enter the number: \n");
+    printf("enter the fibonacci terms.\n");
     scanf("%d", &n);
-    prime(n);
+    printf("The series of number upto %d fibonacci series is :\n", n);
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", fibonacci(i));
+    }
+    printf("\n");
+    printf("\n");
+    printf("\n");
+
+
+
+
     return 0;
 }
