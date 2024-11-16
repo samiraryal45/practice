@@ -2,16 +2,24 @@
 
 int main()
 {
-    int n;
-    printf("enter a year.\n");
-    scanf("%d", &n);
-    if (n % 4 == 0 && n % 100 != 0 || n % 400 == 0)
+    int a[3][3], i, j, k;
+    printf("enter the elements of a matrix.\n");
+    for (int i = 0; i < 3; i++)
     {
-        printf("%d is a leap year.", n);
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
     }
-    else
+    printf("transpose of the matrix is:\n");
+    for (int i = 0; i < 3; i++)
     {
-        printf("%d is not a leap year.", n);
+        for (int j = 0; j < 3; j++)
+        {
+            k = a[j][i];
+            printf("%d\t", k);
+        }
+        printf("\n");
     }
 
     return 0;

@@ -3033,3 +3033,172 @@ int main()
 
     return 0;
 }
+#include <stdio.h>
+
+
+int main()
+{
+    int c;
+    printf("Enter a value:\n");
+    c=getchar( );
+    printf("You entered:");
+    putchar( c );
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, d;
+    printf("enter the values of a,b and c.\n");
+    scanf("%d%d%d", &a, &b, &c);
+    d = a > b ? b : a;
+    d = d > c ? c : d;
+    printf("The smallest number among %d, %d and %d is %d\n",a,b,c,d);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    printf("enter the values of a and b:\n");
+    scanf("%d%d", &a, &b);
+    printf("AND:%d\n", a & b);
+    printf("OR:%d\n", a | b);
+    printf("NAND:%d\n", ~(a & b));
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a = 5;
+    float b = 5.5;
+    double c = 5.5;
+    char d = '5';
+    printf("size of int :%ld\n", sizeof(a));
+    printf("size of  float :%ld\n", sizeof(b));
+    printf("size of double :%ld\n", sizeof(c));
+    printf("size of character :%ld\n", sizeof(d));
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int r1, r2, i1, i2, d1, d2;
+    printf("enter the real and imaginary part of fist complex number:\n");
+    scanf("%d%d", &r1, &i1);
+    printf("enter the real and imaginary part of second complex number:\n");
+    scanf("%d%d", &r2, &i2);
+    d1 = r1 - r2;
+    d2 = i1 - i2;
+    printf("The difference between %d %d c.m. and %d %d c.m. is %d %d c.m.", r1, i1, r2, i2, d1, d2);
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, min;
+    printf("enter three numbers:\n");
+    scanf("%d%d%d", &a, &b, &c);
+    if (a > b && c > b)
+    {
+        printf("The smallest number among %d , %d and %d is %d", a, b, c, b);
+    }
+    else if (b > a && c > a)
+    {
+        printf("The smallest number among %d , %d and %d is %d", a, b, c, a);
+    }
+    else
+    {
+        printf("The smallest number among %d , %d and %d is %d", a, b, c, c);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+
+int main()
+{
+    float a[5];
+    printf("enter the numbers:\n");
+    for (int i = 0; i < 5; i++)
+    {
+        scanf("%f",&a[i]);
+    }
+    printf("The numbers entered are:\n");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("a[%d]=%.2f\n",i,a[i]);
+    }
+    
+    
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a[10], i, n, large = a[0], small = a[0];
+    printf("enter the no. of elements of an array:\n");
+    scanf("%d", &n);
+    printf("enter the elements of an array:\n");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("The elements are:\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("a[%d]=%d\n", i, a[i]);
+    }
+    for (int i = 0; i < n; i++)
+    {
+
+        if (small > a[i])
+        {
+            small = a[i];
+        }
+        if (large < a[i])
+        {
+            large = a[i];
+        }
+    }
+
+    printf("The small number in the array is %d\n", small);
+    printf("The largest number in the array is %d\n", large);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a[3][3], i, j, k;
+    printf("enter the elements of a matrix.\n");
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("transpose of the matrix is:\n");
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            k = a[j][i];
+            printf("%d\t", k);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

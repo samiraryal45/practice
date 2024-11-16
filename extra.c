@@ -1,34 +1,15 @@
 #include <stdio.h>
 
-int fibonacci(int n)
-{
-    if (n < 2)
-    {
-        return n;
-    }
-    else
-    {
-        return fibonacci(n - 1) + fibonacci(n - 2);
-    }
-}
-
 int main()
 {
-    int n;
-    printf("enter the fibonacci terms.\n");
-    scanf("%d", &n);
-    printf("The series of number upto %d fibonacci series is :\n", n);
-
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", fibonacci(i));
-    }
-    printf("\n");
-    printf("\n");
-    printf("\n");
-
-
-
+    int a = 5;
+    float b = 5.5;
+    double c = 5.5;
+    char d = '5';
+    printf("size of int :%ld\n", sizeof(a));
+    printf("size of  float :%ld\n", sizeof(b));
+    printf("size of double :%ld\n", sizeof(c));
+    printf("size of character :%ld\n", sizeof(d));
 
     return 0;
 }
