@@ -2202,12 +2202,13 @@ int main()
     return 0;
 }
 
-// C Program to make a Simple Calculator using 
+// C Program to make a Simple Calculator using
 // switch-case statements
 #include <stdio.h>
 #include <float.h>
 
-int main() {
+int main()
+{
     char op;
     double a, b, res;
 
@@ -2218,10 +2219,11 @@ int main() {
     // Read the two numbers
     printf("Enter two operands: ");
     scanf("%lf %lf", &a, &b);
-    
+
     // Define all four operations in the corresponding
     // switch-case
-    switch (op) {
+    switch (op)
+    {
     case '+':
         res = a + b;
         break;
@@ -2229,7 +2231,7 @@ int main() {
         res = a - b;
         break;
     case '*':
-         res = a * b;
+        res = a * b;
         break;
     case '/':
         res = a / b;
@@ -2238,9 +2240,9 @@ int main() {
         printf("Error! Incorrect Operator Value\n");
         res = -DBL_MAX;
     }
-    if(res!=-DBL_MAX)
-      printf("%.2lf", res);
-    
+    if (res != -DBL_MAX)
+        printf("%.2lf", res);
+
     return 0;
 }
 #include <stdio.h>
@@ -2260,20 +2262,19 @@ int main()
 }
 #include <stdio.h>
 
-
 int main()
 {
-    int a=0,b=1,c,n;
+    int a = 0, b = 1, c, n;
     printf("Enter the n no. of terms of fibonacci series.\n");
-    scanf("%d",&n);
-    for (int i = 1; i <=n; i++)
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
     {
-        printf("%d ",a);
-        c=a+b;
-        a=b;
-        b=c;
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
     }
-    
+
     return 0;
 }
 #include <stdio.h>
@@ -2298,19 +2299,18 @@ int main()
 }
 #include <stdio.h>
 
-
 int main()
 {
     int n;
     printf("Enter a  number.\n");
-    scanf("%d",&n);
-    int a=0;
-    while (n>0)
+    scanf("%d", &n);
+    int a = 0;
+    while (n > 0)
     {
-        a=a*10 + n %10;
-        n /=10;
+        a = a * 10 + n % 10;
+        n /= 10;
     }
-    printf("The reversed number is %d\n",a);
+    printf("The reversed number is %d\n", a);
     return 0;
 }
 #include <stdio.h>
@@ -2353,7 +2353,6 @@ int prime(int n)
     if (n <= 1)
     {
         printf("error\n");
-        
     }
     else
     {
@@ -2380,17 +2379,20 @@ int main()
 }
 #include <stdio.h>
 
-int isPrime(int num) {
+int isPrime(int num)
+{
     if (num <= 1)
         return 0;
-    for (int i = 2; i*i  <= num; i++) {
+    for (int i = 2; i * i <= num; i++)
+    {
         if (num % i == 0)
             return 0;
     }
     return 1;
 }
 
-int main() {
+int main()
+{
     int lower, upper;
 
     printf("Enter two numbers (intervals): ");
@@ -2398,7 +2400,8 @@ int main() {
 
     printf("Prime numbers between %d and %d are: ", lower, upper);
 
-    for (int i = lower; i <= upper; i++) {
+    for (int i = lower; i <= upper; i++)
+    {
         if (isPrime(i))
             printf("%d ", i);
     }
@@ -2407,71 +2410,67 @@ int main() {
 }
 #include <stdio.h>
 
-void neon(int n){
-    int square = n*n;
-    int digit,sum=0;
-    while (square !=0)
+void neon(int n)
+{
+    int square = n * n;
+    int digit, sum = 0;
+    while (square != 0)
     {
-        digit =square %10;
-        sum +=digit;
-        square /=10;
+        digit = square % 10;
+        sum += digit;
+        square /= 10;
     }
-    if (sum==n)
+    if (sum == n)
     {
-        printf("%d is a neon number.\n",n);
+        printf("%d is a neon number.\n", n);
     }
-    else{
-        printf("%d is not a neon number.\n",n);
-
+    else
+    {
+        printf("%d is not a neon number.\n", n);
     }
-    
-    
 }
 int main()
 {
     int n;
     printf("enter a number:\n");
-    scanf("%d",&n);
+    scanf("%d", &n);
     neon(n);
     return 0;
 }
 #include <stdio.h>
 
-
 int main()
 {
-    int n,rev_num;
+    int n, rev_num;
     printf("enter a number.\n");
-    scanf("%d",&n);
-    printf("The reverse of %d is\n",n);
+    scanf("%d", &n);
+    printf("The reverse of %d is\n", n);
 
-    while (n !=0)
+    while (n != 0)
     {
-        rev_num=rev_num*10 +n%10;
-        n /=10;
+        rev_num = rev_num * 10 + n % 10;
+        n /= 10;
     }
-    printf( "%d \n",rev_num);
-    
+    printf("%d \n", rev_num);
+
     return 0;
 }
 #include <stdio.h>
-
 
 int main()
 {
     int n;
     printf("enter a natural number.\n");
-    scanf("%d",&n);
-    printf("The factors of %d are ",n);
-    for (int i = 1; i <=n; i++)
+    scanf("%d", &n);
+    printf("The factors of %d are ", n);
+    for (int i = 1; i <= n; i++)
     {
-        if (n%i==0)
+        if (n % i == 0)
         {
-            printf("%d ",i);
+            printf("%d ", i);
         }
-        
     }
-    
+
     return 0;
 }
 #include <stdio.h>
@@ -2491,8 +2490,9 @@ int main()
             a = b;
             b = c;
         }
-        else{
-            return ;
+        else
+        {
+            return;
         }
     }
     printf("The sum upto %d fibonaccin terms is %d\n", n, sum);
@@ -2500,61 +2500,57 @@ int main()
 }
 #include <stdio.h>
 
-
 int main()
 {
     int n;
     printf("enter the no. of lines you want the pyramid pattern to be printed:\n");
-    scanf("%d",&n);
-    for (int i = n; i >=1; i--)
+    scanf("%d", &n);
+    for (int i = n; i >= 1; i--)
     {
-        for (int j = 1; j <=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            printf("%d ",i);
-
+            printf("%d ", i);
         }
         printf("\n");
     }
-    
+
     return 0;
 }
 #include <stdio.h>
-
 
 int main()
 {
     int n;
     printf("enter the no. of rows for pyramid:\n");
-    scanf("%d",&n);
-    for (int i = 0; i<=n; i++)
+    scanf("%d", &n);
+    for (int i = 0; i <= n; i++)
     {
-        for (int j = 0; j <i; j++)
+        for (int j = 0; j < i; j++)
         {
-            printf("%d ",i);
+            printf("%d ", i);
         }
         printf("\n");
     }
-    
+
     return 0;
 }
 
 #include <stdio.h>
 
-
 int main()
 {
     int n;
     printf("enter the no. of rows for triangle:\n");
-    scanf("%d",&n);
-    for (int i = 0; i <=n; i++)
+    scanf("%d", &n);
+    for (int i = 0; i <= n; i++)
     {
-        for (int j = 0; j <i; j++)
+        for (int j = 0; j < i; j++)
         {
             printf("* ");
         }
         printf("\n");
     }
-    
+
     return 0;
 }
 #include <stdio.h>
@@ -2587,28 +2583,28 @@ int main()
 // Driver code
 int main()
 {
-int rows = 8, i, j, space;
+    int rows = 8, i, j, space;
 
-for (i = rows; i >= 1; --i) 
-{
-	// Loop to print the blank space
-	for (space = 0; 
-			space < rows - i; ++space)
-		printf(" ");
-	
-	// Loop to print the half of 
-	// the star triangle
-	for (j = i; j <= 2 * i - 1; ++j)
-		printf("* ");
-	
-	// Loop to print the rest of 
-	// the star triangle
-	for (j = 0; j < i - 1; ++j)
-		printf("* ");
-	printf("\n");
-}
+    for (i = rows; i >= 1; --i)
+    {
+        // Loop to print the blank space
+        for (space = 0;
+             space < rows - i; ++space)
+            printf(" ");
 
-return 0;
+        // Loop to print the half of
+        // the star triangle
+        for (j = i; j <= 2 * i - 1; ++j)
+            printf("* ");
+
+        // Loop to print the rest of
+        // the star triangle
+        for (j = 0; j < i - 1; ++j)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
 }
 #include <stdio.h>
 
@@ -2619,11 +2615,11 @@ int main()
     scanf("%d", &n);
     for (int i = 0; i <= n; i++)
     {
-        for (int k = 0; k <n-i; k++)
+        for (int k = 0; k < n - i; k++)
         {
             printf(" ");
         }
-        
+
         for (int j = 0; j <= i; j++)
         {
             printf("* ");
@@ -2639,32 +2635,35 @@ int main()
 
 int main()
 {
-	int n = 4, i, j, num = 1, gap;
+    int n = 4, i, j, num = 1, gap;
 
-	gap = n - 1;
+    gap = n - 1;
 
-	for (j = 1; j <= n; j++) {
-		num = j;
+    for (j = 1; j <= n; j++)
+    {
+        num = j;
 
-		for (i = 1; i <= gap; i++)
-			printf(" ");
+        for (i = 1; i <= gap; i++)
+            printf(" ");
 
-		gap--;
+        gap--;
 
-		for (i = 1; i <= j; i++) {
-			printf("%d", num);
-			num++;
-		}
-		num--;
-		num--;
-		for (i = 1; i < j; i++) {
-			printf("%d", num);
-			num--;
-		}
-		printf("\n");
-	}
+        for (i = 1; i <= j; i++)
+        {
+            printf("%d", num);
+            num++;
+        }
+        num--;
+        num--;
+        for (i = 1; i < j; i++)
+        {
+            printf("%d", num);
+            num--;
+        }
+        printf("\n");
+    }
 
-	return 0;
+    return 0;
 }
 #include <stdio.h>
 
@@ -2675,15 +2674,14 @@ int main()
     scanf("%d", &n);
     for (int i = 1; i <= n; i++)
     {
-        for (int k = 0; k <=n-i; k++)
+        for (int k = 0; k <= n - i; k++)
         {
             printf(" ");
         }
-        
+
         for (int j = 0; j < i; j++)
         {
-            printf("%d ",i);
-            
+            printf("%d ", i);
         }
         printf("\n");
     }
@@ -2692,47 +2690,43 @@ int main()
 }
 #include <stdio.h>
 
-
 int main()
 {
     int n;
-    char a='1';
+    char a = '1';
     printf("enter the no. of lines:\n");
-    scanf("%d",&n);
-    for (int i = 1; i <=n; i++)
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
     {
         for (int j = 0; j < i; j++)
         {
-            printf("%d ",i);
+            printf("%d ", i);
         }
         printf("\n");
         a++;
     }
-    
+
     return 0;
 }
 #include <stdio.h>
 
-
 int main()
 {
     int n;
-    char a='A';
+    char a = 'A';
     printf("enter the no. of rows:\n");
-    scanf("%d",&n);
+    scanf("%d", &n);
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <= i; j++)
         {
-            printf("%c ",a);
+            printf("%c ", a);
             a++;
         }
-        
+
         printf("\n");
-        
-        
     }
-    
+
     return 0;
 }
 #include <stdio.h>
@@ -2750,7 +2744,7 @@ int main()
         }
         for (int j = 0; j <= 2 * i; j++)
         {
-          
+
             if (j == 0 || j == 2 * i)
 
                 printf("*");
@@ -2761,10 +2755,11 @@ int main()
         }
         printf("\n");
     }
-    for ( int i = 0; i < 2 * n - 1; i++) {
-		printf("*");
-	}
-	printf("\n");
+    for (int i = 0; i < 2 * n - 1; i++)
+    {
+        printf("*");
+    }
+    printf("\n");
 
     return 0;
 }
@@ -2774,34 +2769,38 @@ int main()
 
 int main()
 {
-	int i, space, n = 5, j = 0;
+    int i, space, n = 5, j = 0;
 
-	// first for loop is used to
-	// iterate number of rows
-	for (i = 0; i < n - 1; i++) {
+    // first for loop is used to
+    // iterate number of rows
+    for (i = 0; i < n - 1; i++)
+    {
 
-		// second for loop is used to print spaces
-		for (space = 1; space < n - i; space++) {
-			printf(" ");
-		}
-		// third for loop is used
-		// to print the required
-		// pattern
-		for (j = 0; j <= 2 * i; j++) {
-			if (j == 0 || j == 2 * i)
-				printf("*");
-			else
-				printf(" ");
-		}
-		// print the new line after every row
-		printf("\n");
-	}
-	// used to print last row
-	for (i = 0; i < 2 * n - 1; i++) {
-		printf("*");
-	}
-	printf("\n");
-	return 0;
+        // second for loop is used to print spaces
+        for (space = 1; space < n - i; space++)
+        {
+            printf(" ");
+        }
+        // third for loop is used
+        // to print the required
+        // pattern
+        for (j = 0; j <= 2 * i; j++)
+        {
+            if (j == 0 || j == 2 * i)
+                printf("*");
+            else
+                printf(" ");
+        }
+        // print the new line after every row
+        printf("\n");
+    }
+    // used to print last row
+    for (i = 0; i < 2 * n - 1; i++)
+    {
+        printf("*");
+    }
+    printf("\n");
+    return 0;
 }
 #include <stdio.h>
 
@@ -2812,7 +2811,7 @@ int main()
     scanf("%d", &n);
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j <= i ; j++)
+        for (int j = 0; j <= i; j++)
         {
             printf(" ");
         }
@@ -2851,7 +2850,7 @@ int main()
         }
         for (int j = 0; j <= 2 * i; j++)
         {
-          
+
             if (j == 0 || j == 2 * i)
 
                 printf("*");
@@ -2862,10 +2861,11 @@ int main()
         }
         printf("\n");
     }
-    for ( int i = 0; i < 2 * n - 1; i++) {
-		printf("*");
-	}
-	printf("\n");
+    for (int i = 0; i < 2 * n - 1; i++)
+    {
+        printf("*");
+    }
+    printf("\n");
 
     return 0;
 }
@@ -2931,7 +2931,6 @@ int main()
 }
 #include <stdio.h>
 
-
 int main()
 {
     int s, l, prime;
@@ -2944,23 +2943,21 @@ int main()
 
     for (int i = s; i <= l; i++)
     {
-        prime =1;
-        for (int j = 2; j <i; j++)
+        prime = 1;
+        for (int j = 2; j < i; j++)
         {
-            if (i %j==0)
+            if (i % j == 0)
             {
-                prime =0;
+                prime = 0;
                 break;
             }
-            
         }
         if (prime)
         {
-            printf("%d ",i);
+            printf("%d ", i);
         }
-        
     }
-    
+
     return 0;
 }
 #include <stdio.h>
@@ -2973,12 +2970,11 @@ int main()
     printf("enter the value of y:\n");
     scanf("%d", &y);
     printf("After swaping.\n");
-    x=x+y;
-    y=x-y;
-    x=x-y;
-    printf("The value of x is %d\n ",x);
-    printf("The value of y is %d\n ",y);
-
+    x = x + y;
+    y = x - y;
+    x = x - y;
+    printf("The value of x is %d\n ", x);
+    printf("The value of y is %d\n ", y);
 
     return 0;
 }
@@ -2991,9 +2987,9 @@ int main()
     scanf("%d", &days);
     months = days / 30;
     remainder = days % 30;
-    week = remainder /7;
-    remainder = remainder%7;
-    printf("%d days = %d months , %d weeks and %d days",days,months,week,remainder);
+    week = remainder / 7;
+    remainder = remainder % 7;
+    printf("%d days = %d months , %d weeks and %d days", days, months, week, remainder);
     return 0;
 }
 #include <stdio.h>
@@ -3035,14 +3031,13 @@ int main()
 }
 #include <stdio.h>
 
-
 int main()
 {
     int c;
     printf("Enter a value:\n");
-    c=getchar( );
+    c = getchar();
     printf("You entered:");
-    putchar( c );
+    putchar(c);
     return 0;
 }
 #include <stdio.h>
@@ -3054,7 +3049,7 @@ int main()
     scanf("%d%d%d", &a, &b, &c);
     d = a > b ? b : a;
     d = d > c ? c : d;
-    printf("The smallest number among %d, %d and %d is %d\n",a,b,c,d);
+    printf("The smallest number among %d, %d and %d is %d\n", a, b, c, d);
     return 0;
 }
 #include <stdio.h>
@@ -3123,22 +3118,20 @@ int main()
 }
 #include <stdio.h>
 
-
 int main()
 {
     float a[5];
     printf("enter the numbers:\n");
     for (int i = 0; i < 5; i++)
     {
-        scanf("%f",&a[i]);
+        scanf("%f", &a[i]);
     }
     printf("The numbers entered are:\n");
     for (int i = 0; i < 5; i++)
     {
-        printf("a[%d]=%.2f\n",i,a[i]);
+        printf("a[%d]=%.2f\n", i, a[i]);
     }
-    
-    
+
     return 0;
 }
 #include <stdio.h>
@@ -3198,6 +3191,172 @@ int main()
             printf("%d\t", k);
         }
         printf("\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a[3][3], b[3][3];
+    printf("enter the elements of the first matrix:");
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("enter the elements of the second matrix:");
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &b[i][j]);
+        }
+    }
+    printf("The matrix obtained after adding two matices A and B is:\n");
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("%d\t", a[i][j] + b[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a[2][3];
+    printf("enter the elements:");
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("The matrix is:\n");
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int a = 0, b = 1, c, n;
+    printf("enter the no. of terms of fibonacci series:\n");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the no. of lines you want the stars to be printed:\n");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i; j++)
+        {
+            printf(" ");
+        }
+        for (int k = 0; k < 2 * n; k++)
+        {
+            if (k == 0 || k == 2 * i)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+
+        printf("\n");
+    }
+    for (int i = 0; i < n + 1; i++)
+    {
+        printf("* ");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main()
+{
+    int n, a[n];
+    printf("enter the elements of an array.\n");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("The elements in the array are:\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("element %d :%d\n", i, a[i]);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+int reverse(int n, int a[])
+{
+    int i;
+    for (i = 0; i < n / 2; i++)
+    {
+        int h = a[i];
+        a[i] = a[(n - 1) - i];
+        a[(n - 1) - i] = h;
+    }
+}
+int main()
+{
+    int n, a[n], i;
+    printf("enter the no. elements in an array:\n");
+    scanf("%d", &n);
+    printf("enter the  elements in an array:\n");
+
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("The elements in an array are:\n");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+    printf("After reversing the elements in an array.\n");
+    reverse(n, a);
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
     }
 
     return 0;

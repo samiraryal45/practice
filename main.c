@@ -2,24 +2,31 @@
 
 int main()
 {
-    int a[3][3], i, j, k;
-    printf("enter the elements of a matrix.\n");
-    for (int i = 0; i < 3; i++)
+    int n, a[n], i;
+    printf("enter the no. elements in an array:\n");
+    scanf("%d", &n);
+    printf("enter the  elements in an array:\n");
+
+    for (i = 0; i < n; i++)
     {
-        for (int j = 0; j < 3; j++)
-        {
-            scanf("%d", &a[i][j]);
-        }
+        scanf("%d", &a[i]);
     }
-    printf("transpose of the matrix is:\n");
-    for (int i = 0; i < 3; i++)
+    printf("The elements in an array are:\n");
+    for (i = 0; i < n; i++)
     {
-        for (int j = 0; j < 3; j++)
-        {
-            k = a[j][i];
-            printf("%d\t", k);
-        }
-        printf("\n");
+        printf("%d ", a[i]);
+    }
+    printf("After reversing the elements in an array.\n");
+    for (i = 0; i < n / 2; i++)
+    {
+        int h = a[i];
+        a[i] = a[(n - 1) - i];
+        a[(n - 1) - i] = h;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
+        
     }
 
     return 0;
