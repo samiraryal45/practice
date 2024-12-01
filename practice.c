@@ -3355,3 +3355,26 @@ int main()
 
     return 0;
 }
+#include <stdio.h>
+
+int reverse(int n)
+{
+    int a=0;
+    while (n>0)
+    {
+        a=a*10 +n %10;
+        n /=10;
+    }
+    return a;
+}
+
+
+int main()
+{
+    int n;
+    printf("enter a number.\n");
+    scanf("%d", &n);
+    int rev =revers(n);
+    printf("The reverse of %d is %d.\n",n,rev);
+    return 0;
+}
