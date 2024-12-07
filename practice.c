@@ -3378,3 +3378,50 @@ int main()
     printf("The reverse of %d is %d.\n",n,rev);
     return 0;
 }
+#include <stdio.h>
+
+int main()
+{
+    int rows1, columns1, rows2, columns2;
+    int matrix1[10][10], matrix2[10][10], result[10][10];
+    printf("enter the rows and columns of the first matrix :\n ");
+    scanf("%d %d", &rows1, &columns1);
+    printf("enter the elements of the first matrix.\n");
+    for (int i = 0; i < rows1; i++)
+    {
+        for (int j = 0; j < columns1; j++)
+        {
+            scanf("%d", &matrix1[i][j]);
+        }
+    }
+    printf("enter the rows and columns of the second matrix :\n ");
+    scanf("%d %d", &rows2, &columns2);
+    
+    printf("enter the elements of the second matrix.\n");
+    for (int i = 0; i < rows2; i++)
+    {
+        for (int j = 0; j < columns2; j++)
+        {
+            scanf("%d", &matrix2[i][j]);
+        }
+
+        for (int i = 0; i < rows1; i++)
+        {
+            for (int j = 0; j < columns2; j++)
+            {
+                result[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+            printf("\n");
+        }
+        printf("The resultant matrix is:\n");
+        for (int i = 0; i < rows1; i++)
+        {
+            for (int j = 0; j < columns2; j++)
+            {
+                printf("%d ", result[i][j]);
+            }
+        }
+
+        return 0;
+    }
+}
