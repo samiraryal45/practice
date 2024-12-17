@@ -4,13 +4,34 @@
 int main()
 {
     int n;
-printf("enter the number which you want the multiplicaton table of:\n");
-scanf("%d",&n);
-printf("The multiplication table of %d is as follows:\n",n);
-for (int i = 1; i <=10; i++)
+    printf("enter the no. of numbers you want to enter.\n");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter the elements.\n");
+for (int i = 0; i < n; i++)
 {
-    printf("%d * %d = %d\n",n,i,n*i);
+    scanf("%d",&a[i]);
+    
 }
+int  small=a[0],large=a[0];
+
+for (int i = 0; i < n; i++)
+{
+   
+if (small>a[i])
+{
+    small=a[i];
+}
+if (large<a[i])
+{
+    large=a[i];
+}
+
+
+}
+    printf("The smallest no. in the array is %d\n",small);
+    printf("The largest no. in the array is %d\n",large);
+
 
     return 0;
 }
